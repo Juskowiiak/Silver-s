@@ -92,6 +92,8 @@ header {
   }
 }
 // ---------------------------- --------------------- MAIN
+//------------ ESTRUCTURE 1
+
 .cards {
   border: 1px solid red;
   width: 90%;
@@ -126,10 +128,12 @@ header {
 .main-title {
   border: 1px solid red;
   text-align: center;
+  display: none;
 }
 .shop1 {
   border: 1px solid #000;
   margin-block: 2rem;
+  display: none;
   &-zone {
     border: 1px solid coral;
     width: 90%;
@@ -179,6 +183,201 @@ header {
           cursor: pointer;
         }
       }
+    }
+  }
+}
+
+//------------ ESTRUCTURE 2
+.thubnail {
+  border: 1px solid #000;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  h2 {
+    margin-block: 0.5rem 1.5rem;
+    span {
+      color: red;
+      font-weight: bold;
+    }
+  }
+  h3 {
+    display: inline-block;
+    background-color: rgb(72, 146, 112);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+}
+.secd-title {
+  border: 1px solid rgb(194, 69, 69);
+  text-align: center;
+  display: none;
+}
+.shop2 {
+  border: 1px solid #000;
+  margin-block: 2rem 0.5rem;
+  display: flex;
+  display: none;
+  &-search {
+    border: 1px solid magenta;
+    width: 10%;
+    h4 {
+      font-size: 0.9rem;
+      text-align: center;
+      padding-block: 0.5rem;
+      background-color: rgb(27, 27, 27);
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      margin-bottom: 2rem;
+    }
+  }
+  &-zone {
+    border: 1px solid coral;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    &-card {
+      border: 1px solid cyan;
+      min-width: 280px;
+      min-height: 330px;
+      margin-bottom: 1rem;
+      padding-block: 0.5rem;
+      &-pict {
+        border: 1px solid magenta;
+        width: 90%;
+        margin-inline: auto;
+        height: 70%;
+        border-radius: 10px;
+        img {
+          border: 1px solid crimson;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+      &-text {
+        border: 1px solid green;
+        text-align: left;
+        height: 25%;
+        width: 90%;
+        margin: 5% auto 0;
+        position: relative;
+        .cart {
+          color: rgb(194, 19, 19);
+          border-radius: 50%;
+          height: 43%;
+          width: 13%;
+          border: 2px solid crimson;
+          position: absolute;
+          bottom: 15%;
+          right: 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.pag {
+  border: 1px solid red;
+  width: 90%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  p {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  p:first-child {
+    text-decoration: underline;
+  }
+}
+//------------ ESTRUCTURE 3
+.thubnail2 {
+  border: 1px solid #000;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  &-linear1 {
+    border: 1px solid red;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-box1 {
+      border: 1px solid green;
+      height: 80%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      padding-left: 2rem;
+      flex-direction: column;
+      h3 {
+        font-size: 1.8rem;
+        margin-block: 0.5rem;
+      }
+      h5 {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        width: 20%;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      p:last-of-type {
+      }
+    }
+    &-box2 {
+      border: 1px solid blue;
+      height: 80%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      padding-left: 2rem;
+      flex-direction: column;
+      h3 {
+        font-size: 1.8rem;
+        margin-block: 0.5rem;
+      }
+      h5 {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        width: 20%;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      p:last-of-type {
+      }
+    }
+  }
+  &-linear2 {
+    border: 1px solid red;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    .box {
+      border: 1px solid orangered;
+      width: 30%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 }
