@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body {
+  width: 100%;
+  position: relative;
+}
+
+header {
+  border: 1px solid red;
+  position: fixed;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
+}
+header .logo {
+  border: 1px solid red;
+  width: 10%;
+}
+header .logo img {
+  border: 1px solid cyan;
+  width: 100%;
+}
+header .menu {
+  border: 1px solid red;
+  display: flex;
+  width: 40%;
+  align-items: center;
+}
+header .menu-options {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+header .menu-options a {
+  border: 1px solid rgb(161, 143, 209);
+  height: 100%;
+  font-size: 1.2rem;
+}
+header .menu-options a:first-child {
+  color: rgb(0, 0, 0);
+}
+header .menu-options i {
+  font-size: 1.3rem;
+}
+header .menu .submenu {
+  display: none;
+}
+
+.lading {
+  border: 1px solid #000;
+  height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.lading-text {
+  width: 50%;
+  padding-left: 5%;
+}
+.lading-text h1 {
+  border: 1px solid red;
+  font-size: 2.5rem;
+  width: 80%;
+  margin-block: 1rem 1.5rem;
+}
+.lading-text-button {
+  border: 1px solid green;
+  display: inline-block;
+  margin-top: 2rem;
+  position: relative;
+}
+.lading-pict {
+  width: 50%;
+  border: 1px solid cyan;
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */
