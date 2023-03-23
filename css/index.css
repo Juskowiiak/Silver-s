@@ -114,6 +114,7 @@ header .menu .submenu {
   margin-top: 2rem;
   position: relative;
   transition: all 0.2s ease-in;
+  z-index: 1;
   cursor: pointer;
 }
 .lading-text-button:hover {
@@ -207,7 +208,6 @@ main .cards-card-name {
   color: var(--grey);
 }
 main .main-title {
-  border: 1px solid red;
   text-align: center;
 }
 main .main-title h2 {
@@ -222,154 +222,251 @@ main .shop1 {
   margin-block: 2rem;
 }
 main .shop1-zone {
+  padding-block: 0.5rem;
   border: 1px solid coral;
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: var(--black);
 }
 main .shop1-zone-card {
-  border: 1px solid cyan;
   min-width: 280px;
   min-height: 330px;
+  max-width: 280px;
+  max-height: 330px;
   margin-bottom: 1rem;
   padding-block: 0.5rem;
 }
 main .shop1-zone-card-pict {
-  border: 1px solid magenta;
-  width: 90%;
+  background-color: var(--grey);
+  width: 80%;
   margin-inline: auto;
   height: 70%;
   border-radius: 10px;
 }
 main .shop1-zone-card-pict img {
-  border: 1px solid crimson;
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 main .shop1-zone-card-text {
-  border: 1px solid green;
   text-align: left;
   height: 25%;
-  width: 90%;
+  width: 80%;
   margin: 5% auto 0;
   position: relative;
 }
+main .shop1-zone-card-text-base {
+  color: var(--verd-esc);
+  font-size: 0.8rem;
+}
+main .shop1-zone-card-text-name {
+  color: var(--verd-clr);
+  font-size: 1.2rem;
+  margin-block: 0.1rem 0.2rem;
+}
+main .shop1-zone-card-text-star {
+  font-size: 0.7rem;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px #000;
+}
+main .shop1-zone-card-text-price {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  color: var(--verd-clr);
+}
 main .shop1-zone-card-text .cart {
-  color: rgb(194, 19, 19);
+  color: var(--yellow);
   border-radius: 50%;
   height: 43%;
   width: 13%;
-  border: 2px solid crimson;
+  background-color: #000;
+  border: 2px solid var(--yellow);
   position: absolute;
   bottom: 15%;
   right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.6s ease-in;
+}
+main .shop1-zone-card-text .cart:hover {
+  background-color: var(--yellow);
+  color: #000;
 }
 main .thubnail {
-  border: 1px solid #000;
+  margin-block: 7rem;
+  background-color: var(--verd-esc);
   height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  display: none;
+}
+main .thubnail h5 {
+  color: var(--grey);
 }
 main .thubnail h2 {
   margin-block: 0.5rem 1.5rem;
+  color: var(--black);
 }
 main .thubnail h2 span {
-  color: red;
+  color: var(--yellow);
   font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+  text-decoration: underline;
 }
 main .thubnail h3 {
   display: inline-block;
-  background-color: rgb(72, 146, 112);
+  background-color: var(--grey);
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: var(--verd-clr);
   text-shadow: 1px 1px 1px #000;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+main .thubnail h3:hover {
+  transform: scale(1.1);
 }
 main .secd-title {
-  border: 1px solid rgb(194, 69, 69);
   text-align: center;
-  display: none;
+}
+main .secd-title h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+main .secd-title p {
+  color: var(--grey);
 }
 main .shop2 {
   border: 1px solid #000;
-  margin-block: 2rem 0.5rem;
+  margin-block: 2rem;
   display: flex;
-  display: none;
 }
 main .shop2-search {
   border: 1px solid magenta;
-  width: 10%;
+  width: 15%;
 }
 main .shop2-search h4 {
-  font-size: 0.9rem;
+  width: 90%;
+  margin: 1rem auto 2rem;
+  font-size: 1.1rem;
   text-align: center;
-  padding-block: 0.5rem;
-  background-color: rgb(27, 27, 27);
-  color: #fff;
+  color: var(--black);
+  position: relative;
+  text-decoration: underline;
+}
+main .shop2-search h4::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90%;
+  bottom: -5%;
+  left: 5%;
+  background-color: var(--black);
+}
+main .shop2-search-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .shop2-search-cards li {
+  display: inline-block;
+  background-color: var(--grey);
+  color: var(--yellow);
   text-shadow: 1px 1px 1px #000;
-  margin-bottom: 2rem;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  margin: 0.3rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+main .shop2-search-cards li:hover {
+  text-decoration: underline;
+  color: var(--verd-clr);
 }
 main .shop2-zone {
-  border: 1px solid coral;
-  width: 90%;
+  padding-block: 0.5rem;
+  border: 1px solid rgb(209, 209, 209);
+  width: 85%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: var(--black);
 }
 main .shop2-zone-card {
   border: 1px solid cyan;
   min-width: 280px;
   min-height: 330px;
+  max-width: 280px;
+  max-height: 330px;
   margin-bottom: 1rem;
   padding-block: 0.5rem;
 }
 main .shop2-zone-card-pict {
-  border: 1px solid magenta;
-  width: 90%;
+  background-color: var(--grey);
+  width: 80%;
   margin-inline: auto;
   height: 70%;
   border-radius: 10px;
 }
 main .shop2-zone-card-pict img {
-  border: 1px solid crimson;
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 main .shop2-zone-card-text {
-  border: 1px solid green;
   text-align: left;
   height: 25%;
-  width: 90%;
+  width: 80%;
   margin: 5% auto 0;
   position: relative;
 }
+main .shop2-zone-card-text-base {
+  color: var(--verd-esc);
+  font-size: 0.8rem;
+}
+main .shop2-zone-card-text-name {
+  color: var(--verd-clr);
+  font-size: 1.2rem;
+  margin-block: 0.1rem 0.2rem;
+}
+main .shop2-zone-card-text-star {
+  font-size: 0.7rem;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px #000;
+}
+main .shop2-zone-card-text-price {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  color: var(--verd-clr);
+}
 main .shop2-zone-card-text .cart {
-  color: rgb(194, 19, 19);
+  color: var(--yellow);
   border-radius: 50%;
   height: 43%;
   width: 13%;
-  border: 2px solid crimson;
+  background-color: #000;
+  border: 2px solid var(--yellow);
   position: absolute;
   bottom: 15%;
   right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.6s ease-in;
+}
+main .shop2-zone-card-text .cart:hover {
+  background-color: var(--yellow);
+  color: #000;
 }
 main .pag {
   border: 1px solid red;
