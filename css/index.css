@@ -6,19 +6,29 @@
   list-style: none;
 }
 
+:root {
+  --verd-clr: #e8eddf;
+  --verd-esc: #cfdbd5;
+  --yellow: #f5cb5c;
+  --black: #242423;
+  --grey: #333533;
+}
+
 img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 body {
   width: 100%;
   position: relative;
+  background-color: #fff;
 }
 
 header {
-  border: 1px solid red;
   position: fixed;
+  z-index: 5;
   height: 10vh;
   top: 0;
   left: 0;
@@ -27,40 +37,47 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 5%;
+  background-color: var(--black);
+  box-shadow: 1px 3px 1px #333533;
 }
 header .logo {
-  border: 1px solid red;
   width: 10%;
-  height: 70%;
-}
-header .logo img {
-  border: 1px solid cyan;
-  width: 100%;
   height: 100%;
 }
+header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 header .menu {
-  border: 1px solid red;
   display: flex;
   width: 40%;
   align-items: center;
 }
 header .menu-options {
-  border: 1px solid green;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-around;
 }
 header .menu-options a {
-  border: 1px solid rgb(161, 143, 209);
+  position: relative;
+  transition: all 1s ease-in;
   height: 100%;
   font-size: 1.2rem;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px #000;
+}
+header .menu-options a:hover {
+  text-decoration: underline;
 }
 header .menu-options a:first-child {
-  color: rgb(0, 0, 0);
+  color: var(--verd-esc);
+  text-decoration: underline;
 }
 header .menu-options i {
   font-size: 1.3rem;
+  color: var(--verd-esc);
 }
 header .menu .submenu {
   display: none;
@@ -73,69 +90,136 @@ header .menu .submenu {
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: var(--black);
 }
 .lading-text {
-  width: 50%;
+  width: 45%;
   padding-left: 5%;
 }
 .lading-text h1 {
-  border: 1px solid red;
   font-size: 2.5rem;
   width: 80%;
   margin-block: 1rem 1.5rem;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px #000;
+}
+.lading-text h3,
+.lading-text h4 {
+  color: var(--verd-clr);
+  text-shadow: 1px 1px 1px #000;
 }
 .lading-text-button {
-  border: 1px solid green;
+  text-shadow: 1px 1px 1px #242423;
   display: inline-block;
   margin-top: 2rem;
   position: relative;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
 }
-.lading-pict {
-  width: 50%;
-  border: 1px solid cyan;
+.lading-text-button:hover {
+  color: var(--black);
+}
+.lading-text-button::before {
+  position: absolute;
+  content: "";
+  top: -10%;
+  left: -10%;
+  width: 130%;
+  height: 130%;
+  background-image: url("/img/background/back1.png");
+  background-size: 170% 170%;
+  background-position: center;
+  z-index: -1;
+}
+.lading-picts {
+  width: 55%;
   height: 100%;
+  position: relative;
+}
+.lading-picts-p1 {
+  position: absolute;
+  box-shadow: 1px 1px 1px #000;
+  border-radius: 3px;
+  width: 30%;
+  height: 45%;
+  top: 10%;
+  left: 10%;
+}
+.lading-picts-p1 img {
+  object-fit: cover;
+}
+.lading-picts-p2 {
+  position: absolute;
+  box-shadow: 1px 1px 1px #000;
+  border-radius: 3px;
+  width: 30%;
+  height: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lading-picts-p2 img {
+  object-fit: cover;
+}
+.lading-picts-p3 {
+  position: absolute;
+  box-shadow: 1px 1px 1px #000;
+  border-radius: 3px;
+  width: 30%;
+  height: 45%;
+  bottom: 10%;
+  right: 10%;
+}
+.lading-picts-p3 img {
+  object-fit: cover;
 }
 
 main .cards {
-  border: 1px solid red;
   width: 90%;
   margin-inline: auto;
   display: flex;
   height: 35vh;
   justify-content: space-around;
-  display: none;
+  margin-block: 8rem 5rem;
 }
 main .cards-card {
-  border: 1px solid cyan;
   width: 20%;
   padding-block: 1rem;
   text-align: center;
+  border: 2px solid var(--verd-clr);
+  box-shadow: 1px 1px 1px var(--yellow);
 }
 main .cards-card-pict {
-  border: 1px solid crimson;
-  height: 80%;
-  width: 70%;
+  background-color: var(--yellow);
+  height: 70%;
+  width: 60%;
   margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .cards-card-pict img {
-  border: 1px solid cyan;
-  width: 100%;
-  height: 100%;
+main .cards-card-pict i {
+  font-size: 4rem;
 }
 main .cards-card-name {
-  border: 1px solid orange;
   display: inline-block;
   position: relative;
+  color: var(--grey);
 }
 main .main-title {
   border: 1px solid red;
   text-align: center;
-  display: none;
+}
+main .main-title h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+main .main-title p {
+  color: var(--grey);
 }
 main .shop1 {
   border: 1px solid #000;
   margin-block: 2rem;
-  display: none;
 }
 main .shop1-zone {
   border: 1px solid coral;
@@ -194,6 +278,7 @@ main .thubnail {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  display: none;
 }
 main .thubnail h2 {
   margin-block: 0.5rem 1.5rem;
@@ -215,11 +300,13 @@ main .thubnail h3 {
 main .secd-title {
   border: 1px solid rgb(194, 69, 69);
   text-align: center;
+  display: none;
 }
 main .shop2 {
   border: 1px solid #000;
   margin-block: 2rem 0.5rem;
   display: flex;
+  display: none;
 }
 main .shop2-search {
   border: 1px solid magenta;
@@ -291,6 +378,7 @@ main .pag {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 main .pag p {
   margin-right: 0.5rem;
@@ -300,6 +388,9 @@ main .pag p:first-child {
   text-decoration: underline;
 }
 
+section {
+  display: none;
+}
 section .thubnail2 {
   border: 1px solid #000;
   height: 100vh;
@@ -414,6 +505,9 @@ section .signup form input[type=submit] {
   cursor: pointer;
 }
 
+footer {
+  display: none;
+}
 footer .footer {
   border: 1px solid #000;
   display: flex;
