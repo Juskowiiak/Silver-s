@@ -27,15 +27,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 5%;
-  display: none;
 }
 header .logo {
   border: 1px solid red;
   width: 10%;
+  height: 70%;
 }
 header .logo img {
   border: 1px solid cyan;
   width: 100%;
+  height: 100%;
 }
 header .menu {
   border: 1px solid red;
@@ -72,7 +73,6 @@ header .menu .submenu {
   display: flex;
   width: 100%;
   align-items: center;
-  display: none;
 }
 .lading-text {
   width: 50%;
@@ -96,7 +96,7 @@ header .menu .submenu {
   height: 100%;
 }
 
-.cards {
+main .cards {
   border: 1px solid red;
   width: 90%;
   margin-inline: auto;
@@ -105,41 +105,39 @@ header .menu .submenu {
   justify-content: space-around;
   display: none;
 }
-.cards-card {
+main .cards-card {
   border: 1px solid cyan;
   width: 20%;
   padding-block: 1rem;
   text-align: center;
 }
-.cards-card-pict {
+main .cards-card-pict {
   border: 1px solid crimson;
   height: 80%;
   width: 70%;
   margin: 0 auto 1rem;
 }
-.cards-card-pict img {
+main .cards-card-pict img {
   border: 1px solid cyan;
   width: 100%;
   height: 100%;
 }
-.cards-card-name {
+main .cards-card-name {
   border: 1px solid orange;
   display: inline-block;
   position: relative;
 }
-
-.main-title {
+main .main-title {
   border: 1px solid red;
   text-align: center;
   display: none;
 }
-
-.shop1 {
+main .shop1 {
   border: 1px solid #000;
   margin-block: 2rem;
   display: none;
 }
-.shop1-zone {
+main .shop1-zone {
   border: 1px solid coral;
   width: 90%;
   margin: 0 auto;
@@ -147,26 +145,26 @@ header .menu .submenu {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.shop1-zone-card {
+main .shop1-zone-card {
   border: 1px solid cyan;
   min-width: 280px;
   min-height: 330px;
   margin-bottom: 1rem;
   padding-block: 0.5rem;
 }
-.shop1-zone-card-pict {
+main .shop1-zone-card-pict {
   border: 1px solid magenta;
   width: 90%;
   margin-inline: auto;
   height: 70%;
   border-radius: 10px;
 }
-.shop1-zone-card-pict img {
+main .shop1-zone-card-pict img {
   border: 1px solid crimson;
   height: 100%;
   border-radius: 10px;
 }
-.shop1-zone-card-text {
+main .shop1-zone-card-text {
   border: 1px solid green;
   text-align: left;
   height: 25%;
@@ -174,7 +172,7 @@ header .menu .submenu {
   margin: 5% auto 0;
   position: relative;
 }
-.shop1-zone-card-text .cart {
+main .shop1-zone-card-text .cart {
   color: rgb(194, 19, 19);
   border-radius: 50%;
   height: 43%;
@@ -189,24 +187,22 @@ header .menu .submenu {
   font-size: 1.1rem;
   cursor: pointer;
 }
-
-.thubnail {
+main .thubnail {
   border: 1px solid #000;
   height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  display: none;
 }
-.thubnail h2 {
+main .thubnail h2 {
   margin-block: 0.5rem 1.5rem;
 }
-.thubnail h2 span {
+main .thubnail h2 span {
   color: red;
   font-weight: bold;
 }
-.thubnail h3 {
+main .thubnail h3 {
   display: inline-block;
   background-color: rgb(72, 146, 112);
   border-radius: 10px;
@@ -216,24 +212,20 @@ header .menu .submenu {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-
-.secd-title {
+main .secd-title {
   border: 1px solid rgb(194, 69, 69);
   text-align: center;
-  display: none;
 }
-
-.shop2 {
+main .shop2 {
   border: 1px solid #000;
   margin-block: 2rem 0.5rem;
   display: flex;
-  display: none;
 }
-.shop2-search {
+main .shop2-search {
   border: 1px solid magenta;
   width: 10%;
 }
-.shop2-search h4 {
+main .shop2-search h4 {
   font-size: 0.9rem;
   text-align: center;
   padding-block: 0.5rem;
@@ -242,7 +234,7 @@ header .menu .submenu {
   text-shadow: 1px 1px 1px #000;
   margin-bottom: 2rem;
 }
-.shop2-zone {
+main .shop2-zone {
   border: 1px solid coral;
   width: 90%;
   margin: 0 auto;
@@ -250,26 +242,26 @@ header .menu .submenu {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.shop2-zone-card {
+main .shop2-zone-card {
   border: 1px solid cyan;
   min-width: 280px;
   min-height: 330px;
   margin-bottom: 1rem;
   padding-block: 0.5rem;
 }
-.shop2-zone-card-pict {
+main .shop2-zone-card-pict {
   border: 1px solid magenta;
   width: 90%;
   margin-inline: auto;
   height: 70%;
   border-radius: 10px;
 }
-.shop2-zone-card-pict img {
+main .shop2-zone-card-pict img {
   border: 1px solid crimson;
   height: 100%;
   border-radius: 10px;
 }
-.shop2-zone-card-text {
+main .shop2-zone-card-text {
   border: 1px solid green;
   text-align: left;
   height: 25%;
@@ -277,7 +269,7 @@ header .menu .submenu {
   margin: 5% auto 0;
   position: relative;
 }
-.shop2-zone-card-text .cart {
+main .shop2-zone-card-text .cart {
   color: rgb(194, 19, 19);
   border-radius: 50%;
   height: 43%;
@@ -292,38 +284,36 @@ header .menu .submenu {
   font-size: 1.1rem;
   cursor: pointer;
 }
-
-.pag {
+main .pag {
   border: 1px solid red;
   width: 90%;
   margin-left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
-.pag p {
+main .pag p {
   margin-right: 0.5rem;
   cursor: pointer;
 }
-.pag p:first-child {
+main .pag p:first-child {
   text-decoration: underline;
 }
 
-.thubnail2 {
+section .thubnail2 {
   border: 1px solid #000;
   height: 100vh;
   width: 90%;
   margin: 0 auto;
 }
-.thubnail2-linear1 {
+section .thubnail2-linear1 {
   border: 1px solid red;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.thubnail2-linear1-box1 {
+section .thubnail2-linear1-box1 {
   border: 1px solid green;
   height: 80%;
   width: 45%;
@@ -332,11 +322,11 @@ header .menu .submenu {
   padding-left: 2rem;
   flex-direction: column;
 }
-.thubnail2-linear1-box1 h3 {
+section .thubnail2-linear1-box1 h3 {
   font-size: 1.8rem;
   margin-block: 0.5rem;
 }
-.thubnail2-linear1-box1 h5 {
+section .thubnail2-linear1-box1 h5 {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   width: 20%;
@@ -344,7 +334,7 @@ header .menu .submenu {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.thubnail2-linear1-box2 {
+section .thubnail2-linear1-box2 {
   border: 1px solid blue;
   height: 80%;
   width: 45%;
@@ -353,11 +343,11 @@ header .menu .submenu {
   padding-left: 2rem;
   flex-direction: column;
 }
-.thubnail2-linear1-box2 h3 {
+section .thubnail2-linear1-box2 h3 {
   font-size: 1.8rem;
   margin-block: 0.5rem;
 }
-.thubnail2-linear1-box2 h5 {
+section .thubnail2-linear1-box2 h5 {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   width: 20%;
@@ -365,7 +355,7 @@ header .menu .submenu {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.thubnail2-linear2 {
+section .thubnail2-linear2 {
   border: 1px solid red;
   height: 50vh;
   display: flex;
@@ -373,13 +363,161 @@ header .menu .submenu {
   justify-content: space-around;
   gap: 1rem;
 }
-.thubnail2-linear2 .box {
+section .thubnail2-linear2 .box {
   border: 1px solid orangered;
   width: 30%;
   height: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+section .signup {
+  border: 1px solid #000;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+section .signup-text {
+  border: 1px solid red;
+}
+section .signup-text h3 {
+  margin-bottom: 0.5rem;
+}
+section .signup-text p span {
+  color: orange;
+  text-shadow: 1px 1px 1px #000;
+}
+section .signup form {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid blue;
+  width: 30%;
+  overflow: hidden;
+}
+section .signup form input[type=text] {
+  border: 1px solid red;
+  width: 90%;
+  padding: 0.5rem 1rem;
+}
+section .signup form input[type=submit] {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  right: 0;
+  top: 0;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgb(14, 160, 111);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+footer .footer {
+  border: 1px solid #000;
+  display: flex;
+  height: 50vh;
+  padding-inline: 1.5rem;
+  align-items: center;
+}
+footer .footer-contact {
+  border: 1px solid blue;
+  width: 30%;
+}
+footer .footer-contact-pict {
+  border: 1px solid red;
+  width: 40%;
+}
+footer .footer-contact-pict img {
+  border: 1px solid cyan;
+  width: 100%;
+  height: 100%;
+}
+footer .footer-contact-text h4 {
+  margin-block: 0.6rem;
+}
+footer .footer-contact-text-us {
+  border: 1px solid green;
+}
+footer .footer-contact-text-us li {
+  display: flex;
+}
+footer .footer-contact-text-us li h5 {
+  margin-right: 0.5rem;
+}
+footer .footer-contact-text-us li:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+footer .footer-contact-text-social {
+  border: 1px solid blue;
+  display: flex;
+}
+footer .footer-info {
+  border: 1px solid green;
+  width: 70%;
+  display: flex;
+}
+footer .footer-info-card {
+  border: 1px solid crimson;
+  padding-inline: 1rem;
+}
+footer .footer-info-card h4 {
+  margin-bottom: 1rem;
+}
+footer .footer-info-card li:not(:last-child) {
+  border: 1px solid blue;
+  margin-bottom: 0.5rem;
+}
+footer .footer-info-card-app {
+  border: 1px solid green;
+  display: flex;
+  margin-bottom: 1rem;
+  height: 50px;
+  width: 300px;
+  justify-content: space-between;
+}
+footer .footer-info-card-app-pict1 {
+  border: 1px solid red;
+  width: 46%;
+}
+footer .footer-info-card-app-pict1 img {
+  border: 1px solid cyan;
+  height: 100%;
+  width: 100%;
+}
+footer .footer-info-card-app-pict2 {
+  border: 1px solid rgb(209, 140, 11);
+  width: 46%;
+}
+footer .footer-info-card-app-pict2 img {
+  border: 1px solid cyan;
+  height: 100%;
+  width: 100%;
+}
+footer .footer-info-card-payment {
+  border: 1px solid green;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+}
+footer .footer-info-card-payment div {
+  border: 1px solid burlywood;
+  width: 23%;
+}
+footer .footer-info-card-payment div img {
+  border: 1px solid cyan;
+  height: 100%;
+  width: 100%;
+}
+footer .footer-info-card:not(:last-child) {
+  margin-right: 2rem;
+}
+footer .under {
+  border: 1px solid red;
+  padding-block: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -24,13 +24,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 5%;
-  display: none;
   .logo {
     border: 1px solid red;
     width: 10%;
+    height: 70%;
     img {
       border: 1px solid cyan;
       width: 100%;
+      height: 100%;
     }
   }
   .menu {
@@ -68,7 +69,7 @@ header {
   display: flex;
   width: 100%;
   align-items: center;
-  display: none;
+
   &-text {
     width: 50%;
     padding-left: 5%;
@@ -92,292 +93,449 @@ header {
   }
 }
 // ---------------------------- --------------------- MAIN
-//------------ ESTRUCTURE 1
-
-.cards {
-  border: 1px solid red;
-  width: 90%;
-  margin-inline: auto;
-  display: flex;
-  height: 35vh;
-  justify-content: space-around;
-  display: none;
-  &-card {
-    border: 1px solid cyan;
-    width: 20%;
-    padding-block: 1rem;
-    text-align: center;
-    &-pict {
-      border: 1px solid crimson;
-      height: 80%;
-      width: 70%;
-      margin: 0 auto 1rem;
-      img {
-        border: 1px solid cyan;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &-name {
-      border: 1px solid orange;
-      display: inline-block;
-      position: relative;
-    }
-  }
-}
-.main-title {
-  border: 1px solid red;
-  text-align: center;
-  display: none;
-}
-.shop1 {
-  border: 1px solid #000;
-  margin-block: 2rem;
-  display: none;
-  &-zone {
-    border: 1px solid coral;
+main {
+  .cards {
+    border: 1px solid red;
     width: 90%;
-    margin: 0 auto;
+    margin-inline: auto;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
+    height: 35vh;
+    justify-content: space-around;
+    display: none;
     &-card {
       border: 1px solid cyan;
-      min-width: 280px;
-      min-height: 330px;
-      margin-bottom: 1rem;
-      padding-block: 0.5rem;
-      &-pict {
-        border: 1px solid magenta;
-        width: 90%;
-        margin-inline: auto;
-        height: 70%;
-        border-radius: 10px;
-        img {
-          border: 1px solid crimson;
-          height: 100%;
-          border-radius: 10px;
-        }
-      }
-      &-text {
-        border: 1px solid green;
-        text-align: left;
-        height: 25%;
-        width: 90%;
-        margin: 5% auto 0;
-        position: relative;
-        .cart {
-          color: rgb(194, 19, 19);
-          border-radius: 50%;
-          height: 43%;
-          width: 13%;
-          border: 2px solid crimson;
-          position: absolute;
-          bottom: 15%;
-          right: 5%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.1rem;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-}
-
-//------------ ESTRUCTURE 2
-.thubnail {
-  border: 1px solid #000;
-  height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: none;
-  h2 {
-    margin-block: 0.5rem 1.5rem;
-    span {
-      color: red;
-      font-weight: bold;
-    }
-  }
-  h3 {
-    display: inline-block;
-    background-color: rgb(72, 146, 112);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-  }
-}
-.secd-title {
-  border: 1px solid rgb(194, 69, 69);
-  text-align: center;
-  display: none;
-}
-.shop2 {
-  border: 1px solid #000;
-  margin-block: 2rem 0.5rem;
-  display: flex;
-  display: none;
-  &-search {
-    border: 1px solid magenta;
-    width: 10%;
-    h4 {
-      font-size: 0.9rem;
+      width: 20%;
+      padding-block: 1rem;
       text-align: center;
-      padding-block: 0.5rem;
-      background-color: rgb(27, 27, 27);
+      &-pict {
+        border: 1px solid crimson;
+        height: 80%;
+        width: 70%;
+        margin: 0 auto 1rem;
+        img {
+          border: 1px solid cyan;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-name {
+        border: 1px solid orange;
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+  .main-title {
+    border: 1px solid red;
+    text-align: center;
+    display: none;
+  }
+  .shop1 {
+    border: 1px solid #000;
+    margin-block: 2rem;
+    display: none;
+    &-zone {
+      border: 1px solid coral;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      &-card {
+        border: 1px solid cyan;
+        min-width: 280px;
+        min-height: 330px;
+        margin-bottom: 1rem;
+        padding-block: 0.5rem;
+        &-pict {
+          border: 1px solid magenta;
+          width: 90%;
+          margin-inline: auto;
+          height: 70%;
+          border-radius: 10px;
+          img {
+            border: 1px solid crimson;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+        &-text {
+          border: 1px solid green;
+          text-align: left;
+          height: 25%;
+          width: 90%;
+          margin: 5% auto 0;
+          position: relative;
+          .cart {
+            color: rgb(194, 19, 19);
+            border-radius: 50%;
+            height: 43%;
+            width: 13%;
+            border: 2px solid crimson;
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  //------------ --------------- --------------------- --------------
+  .thubnail {
+    border: 1px solid #000;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      margin-block: 0.5rem 1.5rem;
+      span {
+        color: red;
+        font-weight: bold;
+      }
+    }
+    h3 {
+      display: inline-block;
+      background-color: rgb(72, 146, 112);
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
       color: #fff;
       text-shadow: 1px 1px 1px #000;
-      margin-bottom: 2rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
     }
   }
-  &-zone {
-    border: 1px solid coral;
+  .secd-title {
+    border: 1px solid rgb(194, 69, 69);
+    text-align: center;
+  }
+  .shop2 {
+    border: 1px solid #000;
+    margin-block: 2rem 0.5rem;
+    display: flex;
+
+    &-search {
+      border: 1px solid magenta;
+      width: 10%;
+      h4 {
+        font-size: 0.9rem;
+        text-align: center;
+        padding-block: 0.5rem;
+        background-color: rgb(27, 27, 27);
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        margin-bottom: 2rem;
+      }
+    }
+    &-zone {
+      border: 1px solid coral;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      &-card {
+        border: 1px solid cyan;
+        min-width: 280px;
+        min-height: 330px;
+        margin-bottom: 1rem;
+        padding-block: 0.5rem;
+        &-pict {
+          border: 1px solid magenta;
+          width: 90%;
+          margin-inline: auto;
+          height: 70%;
+          border-radius: 10px;
+          img {
+            border: 1px solid crimson;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+        &-text {
+          border: 1px solid green;
+          text-align: left;
+          height: 25%;
+          width: 90%;
+          margin: 5% auto 0;
+          position: relative;
+          .cart {
+            color: rgb(194, 19, 19);
+            border-radius: 50%;
+            height: 43%;
+            width: 13%;
+            border: 2px solid crimson;
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .pag {
+    border: 1px solid red;
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+    p:first-child {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---------------------------- --------------------- SECTION
+section {
+  .thubnail2 {
+    border: 1px solid #000;
+    height: 100vh;
     width: 90%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 
-    &-card {
-      border: 1px solid cyan;
-      min-width: 280px;
-      min-height: 330px;
-      margin-bottom: 1rem;
-      padding-block: 0.5rem;
-      &-pict {
-        border: 1px solid magenta;
+    &-linear1 {
+      border: 1px solid red;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &-box1 {
+        border: 1px solid green;
+        height: 80%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        padding-left: 2rem;
+        flex-direction: column;
+        h3 {
+          font-size: 1.8rem;
+          margin-block: 0.5rem;
+        }
+        h5 {
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
+          width: 20%;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        p:last-of-type {
+        }
+      }
+      &-box2 {
+        border: 1px solid blue;
+        height: 80%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        padding-left: 2rem;
+        flex-direction: column;
+        h3 {
+          font-size: 1.8rem;
+          margin-block: 0.5rem;
+        }
+        h5 {
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
+          width: 20%;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        p:last-of-type {
+        }
+      }
+    }
+    &-linear2 {
+      border: 1px solid red;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+      .box {
+        border: 1px solid orangered;
+        width: 30%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+  .signup {
+    border: 1px solid #000;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-text {
+      border: 1px solid red;
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+      p {
+        span {
+          color: orange;
+          text-shadow: 1px 1px 1px #000;
+        }
+      }
+    }
+    form {
+      position: relative;
+      border-radius: 5px;
+      border: 1px solid blue;
+      width: 30%;
+      overflow: hidden;
+      input[type="text"] {
+        border: 1px solid red;
         width: 90%;
-        margin-inline: auto;
-        height: 70%;
-        border-radius: 10px;
+        padding: 0.5rem 1rem;
+      }
+      input[type="submit"] {
+        position: absolute;
+        padding: 0.5rem 1rem;
+        height: 100%;
+        right: 0;
+        top: 0;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        background-color: rgb(14, 160, 111);
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// ---------------------------- --------------------- FOOTER
+footer {
+  .footer {
+    border: 1px solid #000;
+    display: flex;
+    height: 50vh;
+    padding-inline: 1.5rem;
+    align-items: center;
+    &-contact {
+      border: 1px solid blue;
+      width: 30%;
+      &-pict {
+        border: 1px solid red;
+        width: 40%;
         img {
-          border: 1px solid crimson;
+          border: 1px solid cyan;
+          width: 100%;
           height: 100%;
-          border-radius: 10px;
         }
       }
       &-text {
-        border: 1px solid green;
-        text-align: left;
-        height: 25%;
-        width: 90%;
-        margin: 5% auto 0;
-        position: relative;
-        .cart {
-          color: rgb(194, 19, 19);
-          border-radius: 50%;
-          height: 43%;
-          width: 13%;
-          border: 2px solid crimson;
-          position: absolute;
-          bottom: 15%;
-          right: 5%;
+        h4 {
+          margin-block: 0.6rem;
+        }
+        &-us {
+          border: 1px solid green;
+          li {
+            display: flex;
+            h5 {
+              margin-right: 0.5rem;
+            }
+          }
+          li:not(:last-child) {
+            margin-bottom: 0.4rem;
+          }
+        }
+        &-social {
+          border: 1px solid blue;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.1rem;
-          cursor: pointer;
         }
       }
     }
-  }
-}
-.pag {
-  border: 1px solid red;
-  width: 90%;
-  margin-left: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  p {
-    margin-right: 0.5rem;
-    cursor: pointer;
-  }
-  p:first-child {
-    text-decoration: underline;
-  }
-}
-//------------ ESTRUCTURE 3
-.thubnail2 {
-  border: 1px solid #000;
-  height: 100vh;
-  width: 90%;
-  margin: 0 auto;
-  &-linear1 {
-    border: 1px solid red;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    &-box1 {
+    &-info {
       border: 1px solid green;
-      height: 80%;
-      width: 45%;
+      width: 70%;
       display: flex;
-      justify-content: center;
-      padding-left: 2rem;
-      flex-direction: column;
-      h3 {
-        font-size: 1.8rem;
-        margin-block: 0.5rem;
+      &-card {
+        border: 1px solid crimson;
+        padding-inline: 1rem;
+        h4 {
+          margin-bottom: 1rem;
+        }
+        li:not(:last-child) {
+          border: 1px solid blue;
+          margin-bottom: 0.5rem;
+        }
+        &-app {
+          border: 1px solid green;
+          display: flex;
+          margin-bottom: 1rem;
+          height: 50px;
+          width: 300px;
+          justify-content: space-between;
+          &-pict1 {
+            border: 1px solid red;
+            width: 46%;
+            img {
+              border: 1px solid cyan;
+              height: 100%;
+              width: 100%;
+            }
+          }
+          &-pict2 {
+            border: 1px solid rgb(209, 140, 11);
+            width: 46%;
+            img {
+              border: 1px solid cyan;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        &-payment {
+          border: 1px solid green;
+          display: flex;
+          height: 50px;
+          justify-content: space-between;
+          div {
+            border: 1px solid burlywood;
+            width: 23%;
+            img {
+              border: 1px solid cyan;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
       }
-      h5 {
-        margin-top: 1rem;
-        padding: 0.5rem 1rem;
-        width: 20%;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-      }
-      p:last-of-type {
-      }
-    }
-    &-box2 {
-      border: 1px solid blue;
-      height: 80%;
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      padding-left: 2rem;
-      flex-direction: column;
-      h3 {
-        font-size: 1.8rem;
-        margin-block: 0.5rem;
-      }
-      h5 {
-        margin-top: 1rem;
-        padding: 0.5rem 1rem;
-        width: 20%;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-      }
-      p:last-of-type {
+      &-card:not(:last-child) {
+        margin-right: 2rem;
       }
     }
   }
-  &-linear2 {
+  .under {
     border: 1px solid red;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
-    .box {
-      border: 1px solid orangered;
-      width: 30%;
-      height: 60%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
+    padding-block: 1rem;
+    text-align: center;
+    font-size: 0.7rem;
   }
 }
