@@ -657,33 +657,40 @@ section {
 // ---------------------------- --------------------- FOOTER
 footer {
   .footer {
-    border: 1px solid #000;
     display: flex;
-    height: 50vh;
+    height: 60vh;
     padding-inline: 1.5rem;
     align-items: center;
+    color: #fff;
+    background-color: var(--black);
     &-contact {
-      border: 1px solid blue;
       width: 30%;
+      height: 80%;
       &-pict {
-        border: 1px solid red;
         width: 40%;
+        height: 30%;
+        margin-bottom: 1.5rem;
         img {
-          border: 1px solid cyan;
-          width: 100%;
-          height: 100%;
+          object-fit: cover;
         }
       }
       &-text {
         h4 {
-          margin-block: 0.6rem;
+          margin-bottom: 0.4rem;
+          color: var(--verd-esc);
         }
         &-us {
-          border: 1px solid green;
+          margin-block: 1rem;
           li {
             display: flex;
+            align-items: center;
             h5 {
               margin-right: 0.5rem;
+              color: var(--verd-esc);
+            }
+            p {
+              font-size: 0.8rem;
+              color: var(--verd-clr);
             }
           }
           li:not(:last-child) {
@@ -691,63 +698,91 @@ footer {
           }
         }
         &-social {
-          border: 1px solid blue;
           display: flex;
+          li {
+            transition: all 0.4s ease-in-out;
+            color: var(--verd-clr);
+            cursor: pointer;
+          }
+          li:not(:last-child) {
+            margin-right: 0.5rem;
+          }
+          &-fb {
+            &:hover {
+              color: rgb(52, 52, 192);
+            }
+          }
+          &-in {
+            &:hover {
+              color: rgb(231, 52, 186);
+            }
+          }
+          &-tt {
+            &:hover {
+              color: rgb(16, 116, 197);
+            }
+          }
+          &-pi {
+            &:hover {
+              color: rgb(235, 122, 184);
+            }
+          }
+          &-yt {
+            &:hover {
+              color: red;
+            }
+          }
         }
       }
     }
     &-info {
-      border: 1px solid green;
       width: 70%;
       display: flex;
       &-card {
-        border: 1px solid crimson;
         padding-inline: 1rem;
         h4 {
           margin-bottom: 1rem;
+          font-size: 1.2rem;
+          color: var(--verd-esc);
+        }
+        li {
+          font-size: 0.8rem;
+          color: var(--verd-clr);
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         li:not(:last-child) {
-          border: 1px solid blue;
           margin-bottom: 0.5rem;
         }
         &-app {
-          border: 1px solid green;
           display: flex;
           margin-bottom: 1rem;
           height: 50px;
           width: 300px;
           justify-content: space-between;
           &-pict1 {
-            border: 1px solid red;
             width: 46%;
             img {
-              border: 1px solid cyan;
-              height: 100%;
-              width: 100%;
             }
           }
           &-pict2 {
-            border: 1px solid rgb(209, 140, 11);
             width: 46%;
             img {
-              border: 1px solid cyan;
               height: 100%;
               width: 100%;
             }
           }
         }
         &-payment {
-          border: 1px solid green;
           display: flex;
           height: 50px;
-          justify-content: space-between;
+          width: 50%;
+          justify-content: space-around;
           div {
-            border: 1px solid burlywood;
             width: 23%;
             img {
-              border: 1px solid cyan;
-              height: 100%;
-              width: 100%;
             }
           }
         }
@@ -758,9 +793,11 @@ footer {
     }
   }
   .under {
-    border: 1px solid red;
+    background-color: var(--black);
     padding-block: 1rem;
     text-align: center;
     font-size: 0.7rem;
+    color: var(--verd-esc);
+    border-top: 1px solid var(--verd-clr);
   }
 }

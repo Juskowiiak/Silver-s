@@ -642,62 +642,97 @@ section .signup form input[type=submit] {
 }
 
 footer .footer {
-  border: 1px solid #000;
   display: flex;
-  height: 50vh;
+  height: 60vh;
   padding-inline: 1.5rem;
   align-items: center;
+  color: #fff;
+  background-color: var(--black);
 }
 footer .footer-contact {
-  border: 1px solid blue;
   width: 30%;
+  height: 80%;
 }
 footer .footer-contact-pict {
-  border: 1px solid red;
   width: 40%;
+  height: 30%;
+  margin-bottom: 1.5rem;
 }
 footer .footer-contact-pict img {
-  border: 1px solid cyan;
-  width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
 footer .footer-contact-text h4 {
-  margin-block: 0.6rem;
+  margin-bottom: 0.4rem;
+  color: var(--verd-esc);
 }
 footer .footer-contact-text-us {
-  border: 1px solid green;
+  margin-block: 1rem;
 }
 footer .footer-contact-text-us li {
   display: flex;
+  align-items: center;
 }
 footer .footer-contact-text-us li h5 {
   margin-right: 0.5rem;
+  color: var(--verd-esc);
+}
+footer .footer-contact-text-us li p {
+  font-size: 0.8rem;
+  color: var(--verd-clr);
 }
 footer .footer-contact-text-us li:not(:last-child) {
   margin-bottom: 0.4rem;
 }
 footer .footer-contact-text-social {
-  border: 1px solid blue;
   display: flex;
 }
+footer .footer-contact-text-social li {
+  transition: all 0.4s ease-in-out;
+  color: var(--verd-clr);
+  cursor: pointer;
+}
+footer .footer-contact-text-social li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+footer .footer-contact-text-social-fb:hover {
+  color: rgb(52, 52, 192);
+}
+footer .footer-contact-text-social-in:hover {
+  color: rgb(231, 52, 186);
+}
+footer .footer-contact-text-social-tt:hover {
+  color: rgb(16, 116, 197);
+}
+footer .footer-contact-text-social-pi:hover {
+  color: rgb(235, 122, 184);
+}
+footer .footer-contact-text-social-yt:hover {
+  color: red;
+}
 footer .footer-info {
-  border: 1px solid green;
   width: 70%;
   display: flex;
 }
 footer .footer-info-card {
-  border: 1px solid crimson;
   padding-inline: 1rem;
 }
 footer .footer-info-card h4 {
   margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--verd-esc);
+}
+footer .footer-info-card li {
+  font-size: 0.8rem;
+  color: var(--verd-clr);
+  cursor: pointer;
+}
+footer .footer-info-card li:hover {
+  text-decoration: underline;
 }
 footer .footer-info-card li:not(:last-child) {
-  border: 1px solid blue;
   margin-bottom: 0.5rem;
 }
 footer .footer-info-card-app {
-  border: 1px solid green;
   display: flex;
   margin-bottom: 1rem;
   height: 50px;
@@ -705,46 +740,34 @@ footer .footer-info-card-app {
   justify-content: space-between;
 }
 footer .footer-info-card-app-pict1 {
-  border: 1px solid red;
   width: 46%;
 }
-footer .footer-info-card-app-pict1 img {
-  border: 1px solid cyan;
-  height: 100%;
-  width: 100%;
-}
 footer .footer-info-card-app-pict2 {
-  border: 1px solid rgb(209, 140, 11);
   width: 46%;
 }
 footer .footer-info-card-app-pict2 img {
-  border: 1px solid cyan;
   height: 100%;
   width: 100%;
 }
 footer .footer-info-card-payment {
-  border: 1px solid green;
   display: flex;
   height: 50px;
-  justify-content: space-between;
+  width: 50%;
+  justify-content: space-around;
 }
 footer .footer-info-card-payment div {
-  border: 1px solid burlywood;
   width: 23%;
-}
-footer .footer-info-card-payment div img {
-  border: 1px solid cyan;
-  height: 100%;
-  width: 100%;
 }
 footer .footer-info-card:not(:last-child) {
   margin-right: 2rem;
 }
 footer .under {
-  border: 1px solid red;
+  background-color: var(--black);
   padding-block: 1rem;
   text-align: center;
   font-size: 0.7rem;
+  color: var(--verd-esc);
+  border-top: 1px solid var(--verd-clr);
 }
 
 /*# sourceMappingURL=index.css.map */
