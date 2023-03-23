@@ -205,6 +205,7 @@ main {
   }
   .main-title {
     text-align: center;
+    margin-bottom: 4rem;
     h2 {
       font-size: 2.5rem;
       color: var(--black);
@@ -332,6 +333,7 @@ main {
   }
   .secd-title {
     text-align: center;
+    margin-bottom: 4rem;
     h2 {
       font-size: 2.5rem;
       color: var(--black);
@@ -342,7 +344,7 @@ main {
   }
   .shop2 {
     border: 1px solid #000;
-    margin-block: 2rem;
+    margin-block: 2rem 0.5rem;
     display: flex;
     &-search {
       border: 1px solid magenta;
@@ -438,7 +440,12 @@ main {
           &-price {
             margin-top: 0.2rem;
             font-size: 1rem;
-            color: var(--verd-clr);
+            color: var(--yellow);
+            span {
+              margin-right: 0.5rem;
+              text-decoration: line-through;
+              color: var(--verd-clr);
+            }
           }
           .cart {
             color: var(--yellow);
@@ -466,16 +473,20 @@ main {
     }
   }
   .pag {
-    border: 1px solid red;
-    width: 90%;
-    margin-left: 10%;
+    width: 85%;
+    margin-left: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
     p {
-      margin-right: 0.5rem;
+      margin-right: 0.7rem;
       cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+        color: var(--yellow);
+        text-shadow: 1px 1px 1px #000;
+      }
     }
     p:first-child {
       text-decoration: underline;
@@ -485,111 +496,146 @@ main {
 
 // ---------------------------- --------------------- SECTION
 section {
-  display: none;
   .thubnail2 {
-    border: 1px solid #000;
     height: 100vh;
     width: 90%;
-    margin: 0 auto;
-
+    margin: 7rem auto 3rem;
     &-linear1 {
-      border: 1px solid red;
       height: 50vh;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      &-box1 {
-        border: 1px solid green;
+      .box {
         height: 80%;
         width: 45%;
         display: flex;
         justify-content: center;
         padding-left: 2rem;
         flex-direction: column;
+        position: relative;
+        z-index: 2;
+        box-shadow: 1px 1px 1px var(--black);
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-size: 100% 100%;
+          z-index: -1;
+        }
+        p {
+          color: var(--verd-clr);
+        }
         h3 {
           font-size: 1.8rem;
           margin-block: 0.5rem;
+          color: var(--verd-esc);
         }
         h5 {
+          border: 1px solid var(--verd-esc);
           margin-top: 1rem;
-          padding: 0.5rem 1rem;
+          display: inline-block;
+          padding-block: 0.4rem;
           width: 20%;
           text-align: center;
           cursor: pointer;
           transition: all 0.3s ease-in-out;
+          color: var(--verd-esc);
         }
-        p:last-of-type {
+      }
+      &-box1 {
+        &::before {
+          background-image: url("/img/thubnail2/pict1.png");
         }
       }
       &-box2 {
-        border: 1px solid blue;
-        height: 80%;
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        padding-left: 2rem;
-        flex-direction: column;
-        h3 {
-          font-size: 1.8rem;
-          margin-block: 0.5rem;
-        }
-        h5 {
-          margin-top: 1rem;
-          padding: 0.5rem 1rem;
-          width: 20%;
-          text-align: center;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-        }
-        p:last-of-type {
+        &::before {
+          background-image: url("/img/thubnail2/pict0.png");
         }
       }
     }
     &-linear2 {
-      border: 1px solid red;
       height: 50vh;
       display: flex;
       align-items: center;
       justify-content: space-around;
       gap: 1rem;
       .box {
-        border: 1px solid orangered;
+        position: relative;
+        z-index: 2;
         width: 30%;
         height: 60%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        text-shadow: 2px 2px 2px #000;
+        box-shadow: 1px 1px 1px var(--black);
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-size: 100% 100%;
+          z-index: -1;
+        }
+        h3 {
+          font-size: 1.8rem;
+          color: var(--verd-clr);
+        }
+        h5 {
+          color: var(--yellow);
+        }
+      }
+      &-box1 {
+        &::before {
+          background-image: url("/img/thubnail2/pict4.png");
+        }
+      }
+      &-box2 {
+        &::before {
+          background-image: url("/img/thubnail2/pict3.png");
+        }
+      }
+      &-box3 {
+        &::before {
+          background-image: url("/img/thubnail2/pict2.png");
+        }
       }
     }
   }
   .signup {
-    border: 1px solid #000;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--verd-esc);
     &-text {
-      border: 1px solid red;
       h3 {
         margin-bottom: 0.5rem;
+        color: var(--black);
       }
       p {
+        color: var(--grey);
         span {
-          color: orange;
-          text-shadow: 1px 1px 1px #000;
+          color: var(--black);
+          font-weight: bold;
+          text-decoration: underline;
         }
       }
     }
     form {
       position: relative;
       border-radius: 5px;
-      border: 1px solid blue;
       width: 30%;
       overflow: hidden;
       input[type="text"] {
-        border: 1px solid red;
         width: 90%;
         padding: 0.5rem 1rem;
+        color: var(--grey);
       }
       input[type="submit"] {
         position: absolute;
@@ -597,9 +643,9 @@ section {
         height: 100%;
         right: 0;
         top: 0;
-        color: #fff;
+        color: var(--verd-clr);
         text-shadow: 1px 1px 1px #000;
-        background-color: rgb(14, 160, 111);
+        background-color: var(--grey);
         outline: none;
         border: none;
         cursor: pointer;
@@ -610,7 +656,6 @@ section {
 
 // ---------------------------- --------------------- FOOTER
 footer {
-  display: none;
   .footer {
     border: 1px solid #000;
     display: flex;
