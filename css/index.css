@@ -467,7 +467,7 @@ main .cards {
   display: flex;
   height: 35vh;
   justify-content: space-around;
-  margin-block: 8rem 5rem;
+  margin-block: 8rem;
 }
 @media (max-width: 1200px) {
   main .cards {
@@ -675,7 +675,7 @@ main .shop1-zone-card-text .cart:hover {
   color: #000;
 }
 main .thubnail {
-  margin-block: 7rem 8rem;
+  margin-block: 7rem 10rem;
   background-color: var(--verd-esc);
   height: 40vh;
   display: flex;
