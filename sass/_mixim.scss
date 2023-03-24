@@ -1,0 +1,32 @@
+// ---------------------------------- INDEX
+
+@mixin tela_1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin tela_1185 {
+  @media (max-width: 1185px) {
+    @content;
+  }
+}
+@mixin tela_1015 {
+  @media (max-width: 1015px) {
+    @content;
+  }
+}
+@mixin tela_900 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin tela_700 {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
