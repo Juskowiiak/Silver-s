@@ -21,6 +21,7 @@ img {
 }
 
 body {
+  z-index: 8;
   width: 100%;
   position: relative;
   background-color: #fff;
@@ -110,19 +111,10 @@ header .menu-options {
     flex-direction: column;
     height: 90vh;
     top: 10vh;
-    left: 0%;
+    left: -100%;
     width: 100%;
-    transition: all 1s ease-in-out;
-  }
-  header .menu-options::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    transition: all 0.5s ease-in-out;
     background-color: #000;
-    opacity: 0.9;
   }
 }
 header .menu-options a {
@@ -169,25 +161,52 @@ header .menu-options .clos {
     font-size: 2.5rem;
     top: 2%;
     right: 2%;
+    transition: all 0.5s ease-in;
   }
   header .menu-options .clos:hover {
-    color: var(--grey);
+    color: var(--yellow);
+    transform: rotate(90deg);
   }
 }
 header .menu .bag {
-  font-size: 1.3rem;
+  cursor: pointer;
+  font-size: 2rem;
   color: var(--verd-esc);
+  position: relative;
 }
 @media (max-width: 1015px) {
   header .menu .bag {
     font-size: 2rem;
   }
 }
+header .menu .bag:hover {
+  color: var(--yellow);
+}
+header .menu .bag .bag-notification {
+  height: 50%;
+  width: 50%;
+  background-color: red;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 50%;
+  right: 0;
+  bottom: -10%;
+  display: none;
+}
 header .menu .submenu {
   display: none;
   color: var(--verd-clr);
   font-size: 2.2rem;
   cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+header .menu .submenu:hover {
+  color: var(--yellow);
 }
 @media (max-width: 1015px) {
   header .menu .submenu {
@@ -198,11 +217,11 @@ header .carrinho {
   border: 1px solid red;
   position: absolute;
   top: 10vh;
-  right: 0;
+  right: -100%;
   width: 30%;
   height: 90vh;
   z-index: 3;
-  display: none;
+  transition: all 0.5s ease-in-out;
 }
 @media (max-width: 1185px) {
   header .carrinho {
@@ -426,6 +445,13 @@ header .carrinho-results-finish:hover {
   color: var(--black);
   transform: scale(1.1);
   box-shadow: 2px 2px 1px var(--yellow);
+}
+header .carrinho-msg {
+  color: var(--verd-clr);
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 1.1rem;
 }
 
 .lading {
@@ -827,7 +853,7 @@ main .shop1-zone-card-text .cart {
   background-color: #000;
   border: 2px solid var(--yellow);
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   right: 5%;
   display: flex;
   align-items: center;
@@ -912,9 +938,10 @@ main .secd-title p {
   color: var(--grey);
 }
 main .shop2 {
-  margin-block: 1rem 0.5rem;
+  margin-block: 1rem 0;
   display: flex;
   height: 90vh;
+  overflow: hidden;
 }
 @media (max-width: 900px) {
   main .shop2 {
@@ -1134,7 +1161,7 @@ main .shop2-zone-card-text .cart {
   background-color: #000;
   border: 2px solid var(--yellow);
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   right: 5%;
   display: flex;
   align-items: center;
@@ -1160,7 +1187,7 @@ main .pag {
   align-items: center;
 }
 main .pag p {
-  margin-right: 0.7rem;
+  margin-right: 0.2rem;
   cursor: pointer;
   font-weight: bold;
 }
@@ -1610,6 +1637,14 @@ footer .under {
   font-size: 0.7rem;
   color: var(--verd-esc);
   border-top: 1px solid var(--verd-clr);
+}
+
+.invi {
+  left: 0 !important;
+}
+
+.bagScreen {
+  right: 0 !important;
 }
 
 /*# sourceMappingURL=index.css.map */
