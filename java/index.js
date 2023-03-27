@@ -34,9 +34,9 @@ function readShop2() {
     if (item.shop === "shop2" || item.shop === "shop3") {
       shop2Screen.innerHTML += `
       <li class="shop2-zone-card">
-            <div class="shop2-zone-card-pict">
+            <a href="#"><div class="shop2-zone-card-pict">
               <img src="${item.img}" />
-            </div>
+            </div></a>
             <div class="shop2-zone-card-text">
               <p class="shop2-zone-card-text-base">${item.base}</p>
               <h4 class="shop2-zone-card-text-name">${item.name}</h4>
@@ -155,10 +155,9 @@ function seeSize() {
     document.querySelector(".bag-notification").style.cssText = "display:none";
     carrinhoList.style.cssText = "overFlow-y: none";
   } else if (cart.length >= 1) {
+    carrinhoList.style.cssText = "overFlow-y: scroll";
     document.querySelector(".bag-notification").style.cssText = "display:flex";
     document.querySelector(".carrinho-msg").style.cssText = "display:none";
-  } else if (cart.length > 2) {
-    carrinhoList.style.cssText = "overFlow-y: scroll";
   }
 }
 
@@ -249,10 +248,11 @@ function categoryClick(id) {
       `;
     }
   });
-
-  console.log(option);
 }
-/* if (option.base === product.base) {
-    let newBox = products.filter((item) => item.base === option.base);
-    console.log(newBox);
-  }*/
+// ------------------------- SEE MORE -------------------------
+const see = document.querySelector(".see-more");
+
+see.addEventListener("click", function () {
+  let shop2 = document.querySelector(".shop2-zone");
+  shop2.style.cssText = "overFlow:auto";
+});

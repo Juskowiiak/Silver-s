@@ -1,4 +1,4 @@
-// ------------------------- CARRINHO -------------------------
+// ------------------------- menu -------------------------
 const btn = document.querySelector(".submenu");
 const x = document.querySelector(".clos");
 
@@ -17,10 +17,7 @@ bag.addEventListener("click", function () {
   document.querySelector(".carrinho").classList.toggle("bagScreen");
 });
 
-// ------------------------- SEE MORE -------------------------
-const see = document.querySelector(".see-more");
-
-see.addEventListener("click", function () {
-  let shop2 = document.querySelector(".shop2-zone");
-  shop2.style.cssText = "overFlow:auto";
-});
+// ------------------------- Go to top -------------------------
+function goToTop() {
+  document.documentElement.scrollTop = 0;
+}

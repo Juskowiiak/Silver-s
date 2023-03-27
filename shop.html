@@ -8,17 +8,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
-    <link rel="stylesheet" href="./css/index.css" />
-    <title>Silver's</title>
+    <link rel="stylesheet" href="./css/shop.css" />
+    <title>Silver's - Shop</title>
   </head>
   <body>
+    <!--  -------------------------------------- HEADER  -->
     <header>
       <div class="logo">
         <img src="./img/background/logo.png" onclick="goToTop()" />
       </div>
       <div class="menu">
         <ul class="menu-options">
-          <a href="#">Home</a>
+          <a href="/index.html">Home</a>
           <a href="/shop.html">Shop</a>
           <a href="#">Blog</a>
           <a href="#">About</a>
@@ -50,127 +51,57 @@
         <p class="carrinho-msg">The cart is empty ...</p>
       </div>
     </header>
-    <!-- ---------------------------    -LADING   ------------------------------ -->
+    <!--  -------------------------------------- LADING  -->
     <div class="lading">
-      <div class="lading-text">
-        <h3>Brave Jewerly</h3>
-        <h1>They're going to look Better <span>At you than at me</span></h1>
-        <h4>Spend more with us !</h4>
-        <a href="#main-title"><h3 class="lading-text-button">Shop Now</h3></a>
+      <div class="lading-pict">
+        <img src="./img/shop/ring0.png" />
       </div>
-      <div class="lading-picts">
-        <div class="lading-picts-p1 pict">
-          <img src="./img/lading/neck1.png" />
-        </div>
-        <div class="lading-picts-p2 pict">
-          <img src="./img/lading/neck2.png" />
-        </div>
-        <div class="lading-picts-p3 pict">
-          <img src="./img/lading/neck3.png" />
-        </div>
+      <div class="lading-text">
+        <h3><span>Couple's</span> Rings</h3>
+        <p>
+          Two matching rings. Two unique people. One strong bond. Our unisex
+          couples’ rings collection is designed to go together, just like the
+          two of you. Crafted in platinum, discover your perfect match from
+          three different styles and multiple widths.
+        </p>
       </div>
     </div>
-    <!-- -------------------------    -MAIN   ------------------------------- -->
+    <!--  -------------------------------------- MAIN  -->
     <main>
-      <!----------------- STRUCTURE 1 -->
-      <ul class="cards">
-        <li class="cards-card">
-          <div class="cards-card-pict">
-            <i class="bx bx-mobile-alt"></i>
+      <div class="search">
+        <div class="searc-text"></div>
+        <ul class="search-options">
+          <div class="search-options-header">
+            <h2>Material</h2>
+            <ul class="search-options-header-selection">
+              <li>Gold</li>
+              <li>Silver</li>
+            </ul>
           </div>
-          <h3 class="cards-card-name">Online Order</h3>
-        </li>
-        <li class="cards-card">
-          <div class="cards-card-pict">
-            <i class="bx bx-line-chart"></i>
+          <div class="search-options-header">
+            <h2>Stone</h2>
+            <ul class="search-options-header-selection">
+              <li>Diamond</li>
+              <li>Ruby</li>
+              <li>Emerald</li>
+              <li>Safira</li>
+            </ul>
           </div>
-          <h3 class="cards-card-name">Invest Money</h3>
-        </li>
-        <li class="cards-card">
-          <div class="cards-card-pict">
-            <i class="bx bx-package"></i>
+          <div class="search-options-header">
+            <h2>Acessory</h2>
+            <ul class="search-options-header-selection">
+              <li>Bracelets</li>
+              <li>Earrings</li>
+              <li>Rings</li>
+              <li>Necklaces</li>
+            </ul>
           </div>
-          <h3 class="cards-card-name">Happy Sell</h3>
-        </li>
-        <li class="cards-card">
-          <div class="cards-card-pict">
-            <i class="bx bxs-plane-alt"></i>
-          </div>
-          <h3 class="cards-card-name">Free Shipping</h3>
-        </li>
-      </ul>
-      <div class="main-title" id="main-title">
-        <h2>Featured Jewerly</h2>
-        <p>Brave Collection New Design</p>
-      </div>
-      <div class="shop1">
-        <ul class="shop1-zone">
-          <!--  HERE TO ADD PRODUCTS-->
         </ul>
       </div>
-      <!----------------- STRUCTURE 2 -->
-      <div class="thubnail">
-        <h5>Our 5th anniversary</h5>
-        <h2>
-          Up to <span>50% Off </span> - All Rings Bracelets Earrings and
-          Necklances under
-          <span>$25.000,99</span>
-        </h2>
-        <a href="#secd-title"><h3 class="thubnail-button">Explore More</h3></a>
-      </div>
-      <div class="secd-title" id="secd-title">
-        <h2>Discounted Jewerly</h2>
-        <p>Brave Collection New Design</p>
-      </div>
-      <div class="shop2">
-        <div class="shop2-search">
-          <h4>Discount Categories</h4>
-          <ul class="shop2-search-cards">
-            <!--HERE TO ADD CATEGORIES-->
-          </ul>
-        </div>
-        <ul class="shop2-zone">
-          <!-- HERE TO ADD PRODUCTS -->
-        </ul>
-      </div>
-      <div class="pag">
-        <p class="see-more">See more</p>
-        <i class="bx bxs-chevrons-down"></i>
-      </div>
+      <ul class="shop"></ul>
     </main>
-    <!-- -------------------------------    SECTION   -------------------------- -->
+    <!--  -------------------------------------- SECTION  -->
     <section>
-      <!----------------- STRUCTURE 3 -->
-      <div class="thubnail2">
-        <div class="thubnail2-linear1">
-          <div class="thubnail2-linear1-box1 box">
-            <p>crazy discounts</p>
-            <h3>buy only today</h3>
-            <p>The best design here....</p>
-            <h5>Learn More</h5>
-          </div>
-          <div class="thubnail2-linear1-box2 box">
-            <p>brave / shine</p>
-            <h3>upcomming collection</h3>
-            <p>The best prices here....</p>
-            <h5>Collection</h5>
-          </div>
-        </div>
-        <div class="thubnail2-linear2">
-          <div class="thubnail2-linear2-box1 box">
-            <h3>BOLD SALE</h3>
-            <h5>Brave Collection - 50% Off</h5>
-          </div>
-          <div class="thubnail2-linear2-box2 box">
-            <h3>NEW DAZZLING COLLECTION</h3>
-            <h5>Brave / Shine 2022</h5>
-          </div>
-          <div class="thubnail2-linear2-box3 box">
-            <h3>RING'S</h3>
-            <h5>New models</h5>
-          </div>
-        </div>
-      </div>
       <div class="signup">
         <div class="signup-text">
           <h3>Sign up For Newsletters</h3>
@@ -185,7 +116,7 @@
         </form>
       </div>
     </section>
-    <!-- ----------------------------    -FOOTER   ----------------------------- -->
+    <!--  -------------------------------------- FOOTER  -->
     <footer>
       <div class="footer">
         <div class="footer-contact">
@@ -278,10 +209,7 @@
         <p>2023. AmateurCoder - HTML CSS JAVASCRIPT Ecommerce</p>
       </div>
     </footer>
-
-    <script src="./java/basic.js"></script>
     <script src="./java/products.js"></script>
-    <script src="./java/categories.js"></script>
-    <script src="./java/index.js"></script>
+    <script src="./java/basic.js"></script>
   </body>
 </html>
