@@ -109,7 +109,7 @@ header {
       a:hover {
         text-decoration: underline;
       }
-      a:first-child {
+      a:nth-child(2) {
         color: var(--verd-clr);
         text-decoration: underline;
       }
@@ -403,31 +403,44 @@ header {
   z-index: 1;
   width: 100%;
   @include mixim.display;
-  background: linear-gradient(
-    42deg,
-    rgba(232, 237, 223, 1) 8%,
-    rgba(207, 219, 213, 1) 17%,
-    rgba(207, 219, 213, 1) 85%,
-    rgba(232, 237, 223, 1) 91%
-  );
+  background-image: url("/img/shop/wall1.jpg");
+  background-size: 100%;
   &-pict {
     position: absolute;
-    border: 1px solid #ce5c10;
+
     height: 80%;
     width: 30%;
     left: 5%;
+    transition: all 0.5s ease-in;
     @include mixim.display;
     z-index: -1;
+    @include mixim.tela_1015 {
+      left: 0;
+      height: 85%;
+      width: 40%;
+    }
+    @include mixim.tela_700 {
+      height: 100%;
+      width: 45%;
+    }
     img {
       height: 90%;
       width: 100%;
+      @include mixim.tela_1015 {
+        height: 100%;
+      }
     }
   }
   &-text {
-    background-origin: 1px solid red;
     width: 60%;
     @include mixim.display;
     flex-direction: column;
+    @include mixim.tela_1015 {
+      width: 75%;
+    }
+    @include mixim.tela_700 {
+      width: 90%;
+    }
     h3 {
       font-size: 2.2rem;
       margin-bottom: 1rem;
@@ -441,10 +454,173 @@ header {
 }
 // ---------------------------- --------------------- MAIN
 main {
-  border: 1px solid red;
-  margin-block: 30vh;
+  margin-block: 30vh 40vh;
+  .shop2 {
+    width: 90%;
+    margin-inline: auto;
+    min-height: 140vh;
+    position: relative;
+    .pag {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    &-zone {
+      padding-block: 1rem;
+      border-radius: 5px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      background-color: var(--black);
+      gap: 1.3rem 2rem;
+      @include mixim.tela_1200 {
+        overflow-y: scroll;
+      }
+      @include mixim.tela_900 {
+        height: 75vh;
+        width: 95%;
+        padding-block: 0.5rem;
+      }
+      &-card {
+        min-width: 225px;
+        max-width: 225px;
+        min-height: 270px;
+        max-height: 270px;
+        padding-block: 0.5rem;
+        @include mixim.tela_1015 {
+          min-width: 215px;
+          max-width: 215px;
+          min-height: 265px;
+          max-height: 265px;
+        }
+        @include mixim.tela_900 {
+          height: 65%;
+          width: 80%;
+        }
+        @include mixim.tela_700 {
+          min-width: 170px;
+          max-width: 170px;
+          min-height: 260px;
+          max-height: 260px;
+        }
+        &-pict {
+          background-image: url("/img/shop/wall2.jpg");
+          width: 75%;
+          height: 65%;
+          margin-inline: auto;
+          border-radius: 10px;
+          @include mixim.tela_900 {
+            height: 70%;
+            width: 80%;
+          }
+          @include mixim.tela_700 {
+            height: 60%;
+            width: 80%;
+          }
+          img {
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+        }
+        &-text {
+          text-align: left;
+          height: 25%;
+          width: 80%;
+          margin: 5% auto 0;
+          position: relative;
+          @include mixim.tela_1015 {
+            width: 85%;
+          }
+          @include mixim.tela_900 {
+            width: 90%;
+          }
+          @include mixim.tela_700 {
+            margin-top: 1.3rem;
+          }
+          &-base {
+            color: var(--verd-esc);
+            font-size: 0.8rem;
+          }
+          &-name {
+            color: var(--verd-clr);
+            font-size: 1.2rem;
+            margin-block: 0.1rem 0.2rem;
+            @include mixim.tela_1015 {
+              font-size: 1rem;
+            }
+          }
+          &-star {
+            font-size: 0.7rem;
+            color: var(--yellow);
+            text-shadow: 1px 1px 1px #000;
+          }
+          &-price {
+            margin-top: 0.2rem;
+            font-size: 1rem;
+            color: var(--yellow);
+            @include mixim.tela_1015 {
+              font-size: 0.9rem;
+            }
+            span {
+              margin-right: 0.5rem;
+              text-decoration: line-through;
+              color: var(--verd-clr);
+            }
+          }
+          .cart {
+            color: var(--yellow);
+            border-radius: 50%;
+            height: 43%;
+            width: 13%;
+            background-color: #000;
+            border: 2px solid var(--yellow);
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.6s ease-in;
+            @include mixim.tela_700 {
+              font-size: 0.8rem;
+            }
+          }
+          .cart:hover {
+            background-color: var(--yellow);
+            color: #000;
+          }
+        }
+      }
+    }
+    .p2 {
+      display: none;
+    }
+  }
+  .screens {
+    width: 90%;
+    margin-inline: auto;
+    @include mixim.display;
+
+    .scr {
+      border: 2px solid var(--yellow);
+      padding: 0.3rem 0.6rem;
+      margin-inline: 0.3rem;
+
+      cursor: pointer;
+    }
+    .screen1 {
+      background-color: #333533;
+      color: var(--yellow);
+    }
+  }
 }
-/*
+
 // ---------------------------- --------------------- SECTION
 section {
   .signup {
@@ -452,7 +628,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--verd-esc);
+    background-image: url("/img/shop/wall1.jpg");
     @include mixim.tela_900 {
       flex-direction: column;
       text-align: center;
@@ -711,7 +887,7 @@ footer {
     color: var(--verd-esc);
     border-top: 1px solid var(--verd-clr);
   }
-}*/
+}
 // ---------------------------- --------------------- menu/cart dissapear
 .invi {
   left: 0 !important;

@@ -602,7 +602,7 @@ main {
     height: 90vh;
 
     @include mixim.tela_900 {
-      background-color: var(--black);
+      width: 100%;
     }
     &-zone {
       border-radius: 5px;
@@ -646,7 +646,7 @@ main {
           max-height: 260px;
         }
         &-pict {
-          background-color: var(--grey);
+          background-image: url("/img/shop/wall2.jpg");
           width: 75%;
           height: 65%;
           margin-inline: auto;
@@ -739,7 +739,7 @@ main {
   //------------ --------------- --------------------- --------------
   .thubnail {
     margin-block: 12rem;
-    background-color: var(--verd-esc);
+    background-image: url("/img/shop/wall1.jpg");
     height: 40vh;
     display: flex;
     align-items: center;
@@ -923,7 +923,7 @@ main {
           max-height: 260px;
         }
         &-pict {
-          background-color: var(--grey);
+          background-image: url("/img/shop/wall2.jpg");
           width: 75%;
           height: 65%;
           margin-inline: auto;
@@ -1260,7 +1260,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--verd-esc);
+    background-image: url("/img/shop/wall1.jpg");
     @include mixim.tela_900 {
       flex-direction: column;
       text-align: center;

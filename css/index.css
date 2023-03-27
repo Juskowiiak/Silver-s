@@ -708,7 +708,7 @@ main .shop1 {
 }
 @media (max-width: 900px) {
   main .shop1 {
-    background-color: var(--black);
+    width: 100%;
   }
 }
 main .shop1-zone {
@@ -765,7 +765,7 @@ main .shop1-zone-card {
   }
 }
 main .shop1-zone-card-pict {
-  background-color: var(--grey);
+  background-image: url("/img/shop/wall2.jpg");
   width: 75%;
   height: 65%;
   margin-inline: auto;
@@ -872,7 +872,7 @@ main .shop1-zone-card-text .cart:hover {
 }
 main .thubnail {
   margin-block: 12rem;
-  background-color: var(--verd-esc);
+  background-image: url("/img/shop/wall1.jpg");
   height: 40vh;
   display: flex;
   align-items: center;
@@ -1094,7 +1094,7 @@ main .shop2-zone-card {
   }
 }
 main .shop2-zone-card-pict {
-  background-color: var(--grey);
+  background-image: url("/img/shop/wall2.jpg");
   width: 75%;
   height: 65%;
   margin-inline: auto;
@@ -1461,7 +1461,7 @@ section .signup {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--verd-esc);
+  background-image: url("/img/shop/wall1.jpg");
 }
 @media (max-width: 900px) {
   section .signup {
