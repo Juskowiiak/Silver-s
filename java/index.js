@@ -138,7 +138,7 @@ function addPrice() {
   let totalItems = 0;
 
   cart.forEach((item) => {
-    totalPrice += item.price * item.quantity;
+    totalPrice += item.initial * item.quantity;
     totalItems += item.quantity;
   });
   document.querySelector(".carrinho-results-text-quants-total").innerHTML =
@@ -150,12 +150,14 @@ function addPrice() {
 
 //7- ADD A SCROLL ON LIST
 function seeSize() {
-  if (cart.length == 0) {
+  if (cart.length === 0) {
     document.querySelector(".carrinho-msg").style.cssText = "display:block";
     document.querySelector(".bag-notification").style.cssText = "display:none";
+    carrinhoList.style.cssText = "overFlow-y: none";
   } else if (cart.length >= 1) {
     document.querySelector(".bag-notification").style.cssText = "display:flex";
     document.querySelector(".carrinho-msg").style.cssText = "display:none";
+  } else if (cart.length > 2) {
     carrinhoList.style.cssText = "overFlow-y: scroll";
   }
 }
@@ -165,3 +167,92 @@ function deleteItem(id) {
   cart = cart.filter((item) => item.id !== id);
   refreshCart();
 }
+
+//--------------------------- CATEGORIES BUTTON ---------------------
+
+const categoryBtn = document.querySelector(".shop2-search-cards");
+
+function showCategories() {
+  categories.forEach((item) => {
+    categoryBtn.innerHTML += `<li onclick="categoryClick(${item.id})">${item.name}</li>`;
+  });
+}
+showCategories();
+
+function categoryClick(id) {
+  let option = categories.find((opt) => opt.id === id);
+  shop2Screen.innerHTML = "";
+
+  products.forEach((item) => {
+    if (option.base === item.base) {
+      shop2Screen.innerHTML += `
+      <li class="shop2-zone-card">
+            <div class="shop2-zone-card-pict">
+              <img src="${item.img}" />
+            </div>
+            <div class="shop2-zone-card-text">
+              <p class="shop2-zone-card-text-base">${item.base}</p>
+              <h4 class="shop2-zone-card-text-name">${item.name}</h4>
+              <ul class="shop2-zone-card-text-star">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star-half"></i>
+                <i class="bx bx-star"></i>
+              </ul>
+              <h4 class="shop2-zone-card-text-price"><span>$${item.befor}</span>$${item.price}</h4>
+              <i class="bx bx-cart cart" onclick="addCart(${item.id})"></i>
+            </div>
+          </li>
+      `;
+    } else if (option.acessory === item.acessory) {
+      shop2Screen.innerHTML += `
+      <li class="shop2-zone-card">
+            <div class="shop2-zone-card-pict">
+              <img src="${item.img}" />
+            </div>
+            <div class="shop2-zone-card-text">
+              <p class="shop2-zone-card-text-base">${item.base}</p>
+              <h4 class="shop2-zone-card-text-name">${item.name}</h4>
+              <ul class="shop2-zone-card-text-star">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star-half"></i>
+                <i class="bx bx-star"></i>
+              </ul>
+              <h4 class="shop2-zone-card-text-price"><span>$${item.befor}</span>$${item.price}</h4>
+              <i class="bx bx-cart cart" onclick="addCart(${item.id})"></i>
+            </div>
+          </li>
+      `;
+    } else if (option.stone === item.stone) {
+      shop2Screen.innerHTML += `
+      <li class="shop2-zone-card">
+            <div class="shop2-zone-card-pict">
+              <img src="${item.img}" />
+            </div>
+            <div class="shop2-zone-card-text">
+              <p class="shop2-zone-card-text-base">${item.base}</p>
+              <h4 class="shop2-zone-card-text-name">${item.name}</h4>
+              <ul class="shop2-zone-card-text-star">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star-half"></i>
+                <i class="bx bx-star"></i>
+              </ul>
+              <h4 class="shop2-zone-card-text-price"><span>$${item.befor}</span>$${item.price}</h4>
+              <i class="bx bx-cart cart" onclick="addCart(${item.id})"></i>
+            </div>
+          </li>
+      `;
+    }
+  });
+
+  console.log(option);
+}
+/* if (option.base === product.base) {
+    let newBox = products.filter((item) => item.base === option.base);
+    console.log(newBox);
+  }*/

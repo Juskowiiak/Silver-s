@@ -14,6 +14,10 @@
   --grey: #333533;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -147,6 +151,10 @@ header .menu-options a {
 header .menu-options a:hover {
   text-decoration: underline;
 }
+header .menu-options a:first-child {
+  color: var(--verd-clr);
+  text-decoration: underline;
+}
 header .menu-options .clos {
   color: #fff;
   display: none;
@@ -235,12 +243,12 @@ header .carrinho {
 }
 @media (max-width: 900px) {
   header .carrinho {
-    width: 45%;
+    width: 50%;
   }
 }
 @media (max-width: 700px) {
   header .carrinho {
-    width: 55%;
+    width: 60%;
   }
 }
 header .carrinho::before {
@@ -259,7 +267,7 @@ header .carrinho-list {
 }
 header .carrinho-list-product {
   border: 1px solid cyan;
-  height: 18vh;
+  height: 20vh;
   display: flex;
   position: relative;
   margin-bottom: 1.5rem;
@@ -313,6 +321,14 @@ header .carrinho-list-product-info-name {
   font-size: 1.2rem;
   text-shadow: 1px 1px 1px #000;
 }
+@media (max-width: 700px) {
+  header .carrinho-list-product-info-name {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 header .carrinho-list-product-info-prod {
   border: 1px solid cyan;
   display: flex;
@@ -343,6 +359,11 @@ header .carrinho-list-product-info-prod-price {
     width: 100%;
     height: 30%;
     font-size: 1rem;
+  }
+}
+@media (max-width: 1015px) {
+  header .carrinho-list-product-info-prod-price {
+    font-size: 0.9rem;
   }
 }
 header .carrinho-list-product-info-prod-quant {
@@ -413,13 +434,28 @@ header .carrinho-results-text-total {
   text-shadow: 1px 1px 1px #000;
   color: var(--verd-clr);
 }
+@media (max-width: 900px) {
+  header .carrinho-results-text-total {
+    font-size: 0.9rem;
+  }
+}
 header .carrinho-results-text-total span {
   font-size: 1.2rem;
   color: var(--yellow);
 }
+@media (max-width: 900px) {
+  header .carrinho-results-text-total span {
+    font-size: 0.8rem;
+  }
+}
 header .carrinho-results-text-quants {
   text-shadow: 1px 1px 1px #000;
   color: var(--verd-clr);
+}
+@media (max-width: 900px) {
+  header .carrinho-results-text-quants {
+    font-size: 0.9rem;
+  }
 }
 header .carrinho-results-text-quants span {
   font-size: 0.9rem;
@@ -707,7 +743,6 @@ main .main-title p {
   color: var(--grey);
 }
 main .shop1 {
-  border: 1px solid #000;
   margin-block: 1rem 2rem;
   height: 90vh;
 }
@@ -835,6 +870,11 @@ main .shop1-zone-card-text-name {
   font-size: 1.2rem;
   margin-block: 0.1rem 0.2rem;
 }
+@media (max-width: 1015px) {
+  main .shop1-zone-card-text-name {
+    font-size: 1rem;
+  }
+}
 main .shop1-zone-card-text-star {
   font-size: 0.7rem;
   color: var(--yellow);
@@ -844,6 +884,11 @@ main .shop1-zone-card-text-price {
   margin-top: 0.2rem;
   font-size: 1rem;
   color: var(--verd-clr);
+}
+@media (max-width: 1015px) {
+  main .shop1-zone-card-text-price {
+    font-size: 0.9rem;
+  }
 }
 main .shop1-zone-card-text .cart {
   color: var(--yellow);
@@ -896,6 +941,11 @@ main .thubnail h5 {
 main .thubnail h2 {
   margin-block: 0.5rem 1.5rem;
   color: var(--black);
+}
+@media (max-width: 900px) {
+  main .thubnail h2 {
+    font-size: 1.2rem;
+  }
 }
 main .thubnail h2 span {
   color: var(--yellow);
@@ -1022,8 +1072,17 @@ main .shop2-search-cards li {
     background-color: var(--verd-esc);
     color: var(--black);
     text-shadow: none;
-    padding-inline: 0.3rem;
+    padding-inline: 0.2rem;
+  }
+}
+@media (max-width: 700px) {
+  main .shop2-search-cards li {
+    background-color: var(--verd-esc);
+    color: var(--black);
+    text-shadow: none;
+    padding-inline: 0.2rem;
     font-size: 0.8rem;
+    margin: 0.1rem;
   }
 }
 main .shop2-search-cards li:hover {
@@ -1138,6 +1197,11 @@ main .shop2-zone-card-text-name {
   font-size: 1.2rem;
   margin-block: 0.1rem 0.2rem;
 }
+@media (max-width: 1015px) {
+  main .shop2-zone-card-text-name {
+    font-size: 1rem;
+  }
+}
 main .shop2-zone-card-text-star {
   font-size: 0.7rem;
   color: var(--yellow);
@@ -1147,6 +1211,11 @@ main .shop2-zone-card-text-price {
   margin-top: 0.2rem;
   font-size: 1rem;
   color: var(--yellow);
+}
+@media (max-width: 1015px) {
+  main .shop2-zone-card-text-price {
+    font-size: 0.9rem;
+  }
 }
 main .shop2-zone-card-text-price span {
   margin-right: 0.5rem;
@@ -1280,6 +1349,10 @@ section .thubnail2-linear1 .box::before {
   top: 0;
   background-size: 100% 100%;
   z-index: -1;
+  transition: all 4s ease-in;
+}
+section .thubnail2-linear1 .box:hover::before {
+  background-size: 105% 105%;
 }
 section .thubnail2-linear1 .box p {
   color: var(--verd-clr);
@@ -1366,6 +1439,10 @@ section .thubnail2-linear2 .box::before {
   top: 0;
   background-size: 100% 100%;
   z-index: -1;
+  transition: all 4s ease-in;
+}
+section .thubnail2-linear2 .box:hover::before {
+  background-size: 105% 105%;
 }
 section .thubnail2-linear2 .box h3 {
   font-size: 1.8rem;
@@ -1448,6 +1525,13 @@ section .signup form input[type=submit] {
   outline: none;
   border: none;
   cursor: pointer;
+  transition: all 0.7s ease-in;
+}
+section .signup form input[type=submit]:hover {
+  background-color: var(--verd-esc);
+  color: var(--grey);
+  text-decoration: underline;
+  text-shadow: none;
 }
 
 footer .footer {
@@ -1461,6 +1545,7 @@ footer .footer {
 @media (max-width: 1015px) {
   footer .footer {
     flex-direction: column;
+    height: 75vh;
   }
 }
 @media (max-width: 700px) {
@@ -1585,10 +1670,20 @@ footer .footer-info-card h4 {
   font-size: 1.2rem;
   color: var(--verd-esc);
 }
+@media (max-width: 900px) {
+  footer .footer-info-card h4 {
+    font-size: 1rem;
+  }
+}
 footer .footer-info-card li {
   font-size: 0.8rem;
   color: var(--verd-clr);
   cursor: pointer;
+}
+@media (max-width: 900px) {
+  footer .footer-info-card li {
+    font-size: 0.7rem;
+  }
 }
 footer .footer-info-card li:hover {
   text-decoration: underline;
@@ -1603,15 +1698,27 @@ footer .footer-info-card-app {
   width: 300px;
   justify-content: space-between;
 }
+@media (max-width: 900px) {
+  footer .footer-info-card-app {
+    width: 200px;
+    justify-content: space-around;
+  }
+}
 footer .footer-info-card-app-pict1 {
   width: 46%;
+}
+@media (max-width: 900px) {
+  footer .footer-info-card-app-pict1 {
+    width: 40%;
+  }
 }
 footer .footer-info-card-app-pict2 {
   width: 46%;
 }
-footer .footer-info-card-app-pict2 img {
-  height: 100%;
-  width: 100%;
+@media (max-width: 900px) {
+  footer .footer-info-card-app-pict2 {
+    width: 40%;
+  }
 }
 footer .footer-info-card-payment {
   display: flex;
@@ -1628,6 +1735,14 @@ footer .footer-info-card:not(:last-child) {
 @media (max-width: 1015px) {
   footer .footer-info-card:not(:last-child) {
     margin-bottom: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  footer .footer-info-card:last-child {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 footer .under {
