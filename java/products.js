@@ -106,7 +106,7 @@ const products = [
     price: 13300,
     initial: 13300,
     shop: "shop1",
-    acessory: "earrings",
+    acessory: "bracelet",
     img: "./img/products/pict7.png",
     descript:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nobis consectetur labore sint, quod repudiandae nihil iusto reiciendis enim facilis iure qui cum doloremque non tempore expedita. Odio, perspiciatis fugit!",
