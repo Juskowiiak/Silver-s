@@ -396,71 +396,119 @@ header {
 }
 // ---------------------------- --------------------- Main
 .main {
-  border: 1px solid red;
   margin-block: 20vh;
   display: flex;
   width: 90%;
   margin-inline: auto;
   height: 80vh;
+  background-image: url("/img/shop/wall1.jpg");
+  border-radius: 5px;
+
+  @include mixim.tela_700 {
+    flex-direction: column;
+    margin-block: 15vh;
+  }
+  .box {
+    @include mixim.tela_700 {
+    }
+  }
   &-pict {
-    border: 1px solid green;
     width: 40%;
     @include mixim.display;
-    padding: 2rem;
+    padding: 3rem;
+    @include mixim.tela_1015 {
+      width: 50%;
+      padding: 1rem;
+    }
+    @include mixim.tela_700 {
+      width: 100%;
+      height: 35%;
+    }
     img {
-      border: 1px solid orangered;
     }
   }
   &-text {
-    border: 1px solid blue;
+    position: relative;
     width: 60%;
     padding-top: 1rem;
+    @include mixim.tela_1015 {
+      width: 50%;
+    }
+    @include mixim.tela_700 {
+      width: 90%;
+      margin-inline: auto;
+    }
     h5 {
       margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      color: var(--grey);
+      .bar {
+        font-size: 1.1rem;
+        margin-inline: 0.2rem;
+      }
+      .page {
+        text-decoration: underline;
+      }
+      a {
+        color: var(--grey);
+        &:hover {
+          color: darkred;
+        }
+      }
     }
     &-title {
       margin-bottom: 1.1rem;
+      color: var(--grey);
     }
     &-price {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      .dolar {
+        font-size: 2.2rem;
+      }
     }
     &-info {
-      border: 1px solid red;
       margin-bottom: 3rem;
       display: flex;
       align-items: center;
+      @include mixim.tela_700 {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+      }
       &-addCart {
-        border: 1px solid blue;
         padding: 0.5rem 0.6rem;
         border-radius: 5px;
         cursor: pointer;
-      }
-      &-quant {
-        border: 1px solid #000;
-        @include mixim.display;
-        font-size: 1.2rem;
-        margin-right: 1rem;
-        &-many {
-          margin-inline: 0.5rem;
-        }
-        &-arrow {
-          border: 1px solid green;
-          @include mixim.display;
-          flex-direction: column;
-          cursor: pointer;
-          font-size: 0.9rem;
-        }
+        background-color: darkred;
+        color: #fff;
+        animation: zoom 1.5s infinite alternate-reverse;
       }
     }
     &-details {
-      border: 1px solid sienna;
       &-title {
         margin-bottom: 1rem;
+        font-size: 1.5rem;
+        color: darkred;
+        @include mixim.tela_700 {
+          margin-top: 2rem;
+          font-size: 1.3rem;
+        }
       }
       p {
-        border: 1px solid blue;
-        width: 90%;
+        font-size: 1.1rem;
+        width: 80%;
+        padding-inline-end: 1rem;
+        @include mixim.tela_1015 {
+          font-size: 0.9rem;
+          width: 100%;
+        }
+        @include mixim.tela_700 {
+          padding-inline-end: 0;
+        }
       }
     }
   }
@@ -739,4 +787,14 @@ footer {
 }
 .bagScreen {
   right: 0 !important;
+}
+
+// ------------------------ --------------  ANIMATION
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

@@ -34,9 +34,9 @@ function readShop2() {
     if (item.shop === "shop2" || item.shop === "shop3") {
       shop2Screen.innerHTML += `
       <li class="shop2-zone-card">
-            <a href="#"><div class="shop2-zone-card-pict">
-              <img src="${item.img}" />
-            </div></a>
+            <div class="shop2-zone-card-pict">
+              <a href="view.html"><img src="${item.img}" onclick="imgClick(${item.id})"/></a>
+            </div>
             <div class="shop2-zone-card-text">
               <p class="shop2-zone-card-text-base">${item.base}</p>
               <h4 class="shop2-zone-card-text-name">${item.name}</h4>
@@ -256,3 +256,11 @@ see.addEventListener("click", function () {
   let shop2 = document.querySelector(".shop2-zone");
   shop2.style.cssText = "overFlow:auto";
 });
+
+//--------------------------- IMAGE CLICK ---------------------
+let view = [];
+function imgClick(id) {
+  let imgPick = products.find((item) => item.id === id);
+  view.push(imgPick);
+  localStorage.setItem("view", JSON.stringify(view));
+}

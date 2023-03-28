@@ -21,7 +21,8 @@ html {
 img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 body {
@@ -58,11 +59,13 @@ header .logo {
 header .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1015px) {
   header .logo img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 header .menu {
@@ -266,7 +269,8 @@ header .carrinho-list-product-pict {
   }
 }
 header .carrinho-list-product-pict img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 header .carrinho-list-product-info {
   width: 65%;
@@ -455,60 +459,34 @@ header .carrinho-msg {
 }
 
 .main {
+  border: 1px solid red;
   margin-block: 20vh;
   display: flex;
   width: 90%;
   margin-inline: auto;
   height: 80vh;
-  background-image: url("/img/shop/wall1.jpg");
-  border-radius: 5px;
-}
-@media (max-width: 700px) {
-  .main {
-    flex-direction: column;
-    margin-block: 15vh;
-  }
 }
 .main-pict {
+  border: 1px solid rgb(132, 207, 132);
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem;
 }
-@media (max-width: 1015px) {
-  .main-pict {
-    width: 50%;
-    padding: 1rem;
-  }
-}
-@media (max-width: 700px) {
-  .main-pict {
-    width: 100%;
-    height: 35%;
-  }
+.main-pict img {
+  border: 1px solid rgb(58, 155, 211);
 }
 .main-text {
-  position: relative;
+  border: 1px solid blue;
   width: 60%;
   padding-top: 1rem;
 }
-@media (max-width: 1015px) {
-  .main-text {
-    width: 50%;
-  }
-}
-@media (max-width: 700px) {
-  .main-text {
-    width: 90%;
-    margin-inline: auto;
-  }
-}
 .main-text h5 {
   margin-bottom: 2rem;
+  border: 1px solid red;
   display: flex;
   align-items: center;
-  color: var(--grey);
 }
 .main-text h5 .bar {
   font-size: 1.1rem;
@@ -517,71 +495,54 @@ header .carrinho-msg {
 .main-text h5 .page {
   text-decoration: underline;
 }
-.main-text h5 a {
-  color: var(--grey);
-}
-.main-text h5 a:hover {
-  color: darkred;
-}
 .main-text-title {
   margin-bottom: 1.1rem;
-  color: var(--grey);
 }
 .main-text-price {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.main-text-price .dolar {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 .main-text-info {
+  border: 1px solid red;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
 }
-@media (max-width: 700px) {
-  .main-text-info {
-    position: absolute;
-    top: 30%;
-    right: 5%;
-  }
-}
 .main-text-info-addCart {
+  border: 1px solid blue;
   padding: 0.5rem 0.6rem;
   border-radius: 5px;
   cursor: pointer;
-  background-color: darkred;
-  color: #fff;
-  animation: zoom 1.5s infinite alternate-reverse;
+}
+.main-text-info-quant {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.main-text-info-quant-many {
+  margin-inline: 0.5rem;
+}
+.main-text-info-quant-arrow {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.main-text-details {
+  border: 1px solid sienna;
 }
 .main-text-details-title {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: darkred;
-}
-@media (max-width: 700px) {
-  .main-text-details-title {
-    margin-top: 2rem;
-    font-size: 1.3rem;
-  }
 }
 .main-text-details p {
-  font-size: 1.1rem;
-  width: 80%;
-  padding-inline-end: 1rem;
-}
-@media (max-width: 1015px) {
-  .main-text-details p {
-    font-size: 0.9rem;
-    width: 100%;
-  }
-}
-@media (max-width: 700px) {
-  .main-text-details p {
-    padding-inline-end: 0;
-  }
+  border: 1px solid blue;
+  width: 90%;
 }
 
 section .signup {
@@ -703,11 +664,13 @@ footer .footer-contact-pict {
   }
 }
 footer .footer-contact-pict img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1015px) {
   footer .footer-contact-pict img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 footer .footer-contact-text h4 {
@@ -873,15 +836,4 @@ footer .under {
 
 .bagScreen {
   right: 0 !important;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-/*# sourceMappingURL=view.css.map */
+}/*# sourceMappingURL=view.css.map */
