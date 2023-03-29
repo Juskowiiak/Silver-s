@@ -125,10 +125,6 @@ header .menu-options a {
 header .menu-options a:hover {
   text-decoration: underline;
 }
-header .menu-options a:nth-child(2) {
-  color: var(--verd-clr);
-  text-decoration: underline;
-}
 header .menu-options .clos {
   color: #fff;
   display: none;
@@ -584,6 +580,123 @@ header .carrinho-msg {
   }
 }
 
+section .shop1 {
+  height: 35vh;
+  margin-bottom: 20vh;
+  width: 90%;
+  margin: 20vh auto;
+  overflow: hidden;
+  position: relative;
+}
+section .shop1-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  background-color: var(--black);
+  animation: slide 16s infinite linear alternate-reverse;
+}
+section .shop1-zone-card {
+  min-width: 150px;
+  max-width: 150px;
+  height: 100%;
+  padding-block: 0.5rem;
+  margin-inline: 1rem;
+  transition: all 0.5s ease-in;
+}
+section .shop1-zone-card:hover {
+  background-color: #333533;
+  border-radius: 3px;
+}
+section .shop1-zone-card-pict {
+  background-image: url("/img/shop/wall2.jpg");
+  width: 75%;
+  height: 65%;
+  margin-inline: auto;
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  section .shop1-zone-card-pict {
+    height: 65%;
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  section .shop1-zone-card-pict {
+    height: 60%;
+    width: 80%;
+  }
+}
+section .shop1-zone-card-pict img {
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  section .shop1-zone-card-pict img {
+    object-fit: contain;
+  }
+}
+section .shop1-zone-card-text {
+  text-align: left;
+  height: 25%;
+  width: 80%;
+  margin: 5% auto 0;
+  position: relative;
+}
+section .shop1-zone-card-text-base {
+  color: var(--verd-esc);
+  font-size: 0.8rem;
+}
+section .shop1-zone-card-text-name {
+  color: var(--verd-clr);
+  font-size: 0.8rem;
+  margin-block: 0.1rem 0.2rem;
+}
+@media (max-width: 1015px) {
+  section .shop1-zone-card-text-name {
+    font-size: 1rem;
+  }
+}
+section .shop1-zone-card-text-star {
+  font-size: 0.6rem;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px #000;
+}
+section .shop1-zone-card-text-price {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  color: var(--verd-clr);
+}
+@media (max-width: 1015px) {
+  section .shop1-zone-card-text-price {
+    font-size: 0.9rem;
+  }
+}
+section .shop1-zone-card-text .cart {
+  color: var(--yellow);
+  border-radius: 50%;
+  height: 43%;
+  width: 13%;
+  background-color: #000;
+  border: 2px solid var(--yellow);
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.6s ease-in;
+}
+section .shop1-zone-card-text .cart:hover {
+  background-color: var(--yellow);
+  color: #000;
+}
 section .signup {
   height: 20vh;
   display: flex;
@@ -881,6 +994,14 @@ footer .under {
   }
   to {
     transform: scale(1.1);
+  }
+}
+@keyframes slide {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 0;
   }
 }
 

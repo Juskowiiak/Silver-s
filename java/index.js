@@ -9,7 +9,7 @@ function readShop1() {
       shop1Screen.innerHTML += `
       <li class="shop1-zone-card">
       <div class="shop1-zone-card-pict">
-        <img src="${item.img}" />
+      <a href="view.html"><img src="${item.img}" onclick="imgClick(${item.id})"/></a>
       </div>
       <div class="shop1-zone-card-text">
         <p class="shop1-zone-card-text-base">${item.base}</p>

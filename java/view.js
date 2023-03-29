@@ -1,7 +1,47 @@
 let carrinhoList = document.querySelector(".carrinho-list");
 
-// --------------------------- SHOW MAIN
+// --------------------------- Slider function
+let mySlider = document.querySelector(".shop1-zone");
+mySlider.innerHTML = "";
+function slider() {
+  let newProducts = products;
+  info.forEach(function (element, index, array) {
+    if (newProducts.indexOf(element) == -1) {
+      newProducts = newProducts.filter((item) => item.id !== element.id);
+      newProducts.forEach((item) => {
+        mySlider.innerHTML += `
+        <li class="shop1-zone-card">
+            <div class="shop1-zone-card-pict">
+            <a href="view.html"><img src="${item.img}" onclick="imgClick(${item.id})"/></a>
+            </div>
+            <div class="shop1-zone-card-text">
+              <p class="shop1-zone-card-text-base">${item.base}</p>
+              <h5 class="shop1-zone-card-text-name">${item.name}</h5>
+              <ul class="shop1-zone-card-text-star">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </ul>
+              <h5 class="shop1-zone-card-text-price">$${item.price}</h5>
+            </div>
+          </li>
+        `;
+      });
+    }
+  });
+}
+
+// --------------- ----------------- IMAGE PICK
 let info = JSON.parse(localStorage.getItem("view"));
+function imgClick(id) {
+  let imgPick = products.find((item) => item.id === id);
+  info.push(imgPick);
+  localStorage.setItem("view", JSON.stringify(info));
+  slider();
+}
+// --------------------------- SHOW MAIN
 let checkProduct = document.querySelector(".main");
 
 function putImage() {
@@ -38,6 +78,7 @@ function putImage() {
       </div>
     `;
   });
+  slider();
 }
 putImage();
 

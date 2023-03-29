@@ -108,10 +108,6 @@ header {
       a:hover {
         text-decoration: underline;
       }
-      a:nth-child(2) {
-        color: var(--verd-clr);
-        text-decoration: underline;
-      }
       .clos {
         color: #fff;
         display: none;
@@ -513,9 +509,116 @@ header {
     }
   }
 }
-
 // ---------------------------- --------------------- SECTION
 section {
+  .shop1 {
+    height: 35vh;
+    margin-bottom: 20vh;
+    width: 90%;
+    margin: 20vh auto;
+    overflow: hidden;
+    position: relative;
+    &-zone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+      padding: 1rem;
+      height: 100%;
+      display: flex;
+      background-color: var(--black);
+      animation: slide 16s infinite linear alternate-reverse;
+      &-card {
+        min-width: 150px;
+        max-width: 150px;
+        height: 100%;
+        padding-block: 0.5rem;
+        margin-inline: 1rem;
+        transition: all 0.5s ease-in;
+        &:hover {
+          background-color: #333533;
+          border-radius: 3px;
+        }
+        &-pict {
+          background-image: url("/img/shop/wall2.jpg");
+          width: 75%;
+          height: 65%;
+          margin-inline: auto;
+          border-radius: 10px;
+          @include mixim.tela_900 {
+            height: 65%;
+            width: 80%;
+          }
+          @include mixim.tela_700 {
+            height: 60%;
+            width: 80%;
+          }
+          img {
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            @include mixim.tela_700 {
+              object-fit: contain;
+            }
+          }
+        }
+        &-text {
+          text-align: left;
+          height: 25%;
+          width: 80%;
+          margin: 5% auto 0;
+          position: relative;
+
+          &-base {
+            color: var(--verd-esc);
+            font-size: 0.8rem;
+          }
+          &-name {
+            color: var(--verd-clr);
+            font-size: 0.8rem;
+            margin-block: 0.1rem 0.2rem;
+            @include mixim.tela_1015 {
+              font-size: 1rem;
+            }
+          }
+          &-star {
+            font-size: 0.6rem;
+            color: var(--yellow);
+            text-shadow: 1px 1px 1px #000;
+          }
+          &-price {
+            margin-top: 0.2rem;
+            font-size: 1rem;
+            color: var(--verd-clr);
+            @include mixim.tela_1015 {
+              font-size: 0.9rem;
+            }
+          }
+          .cart {
+            color: var(--yellow);
+            border-radius: 50%;
+            height: 43%;
+            width: 13%;
+            background-color: #000;
+            border: 2px solid var(--yellow);
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.6s ease-in;
+          }
+          .cart:hover {
+            background-color: var(--yellow);
+            color: #000;
+          }
+        }
+      }
+    }
+  }
   .signup {
     height: 20vh;
     display: flex;
@@ -796,5 +899,14 @@ footer {
   }
   to {
     transform: scale(1.1);
+  }
+}
+
+@keyframes slide {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 0;
   }
 }

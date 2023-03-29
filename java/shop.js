@@ -3,14 +3,23 @@ let screen1 = document.querySelector(".p1");
 let screen2 = document.querySelector(".p2");
 let carrinhoList = document.querySelector(".carrinho-list");
 
+// --------------- ----------------- IMAGE PICK
+let info = JSON.parse(localStorage.getItem("view"));
+function imgClick(id) {
+  let imgPick = products.find((item) => item.id === id);
+  info.push(imgPick);
+  localStorage.setItem("view", JSON.stringify(info));
+}
+
+// ------------------------ --------------------- START
 function showScreen1() {
   products.forEach((item) => {
     if (item.id <= 11) {
       screen1.innerHTML += `
       <li class="shop2-zone-card">
-            <a href="#"><div class="shop2-zone-card-pict">
-              <img src="${item.img}" />
-            </div></a>
+            <div class="shop2-zone-card-pict">
+            <a href="view.html"><img src="${item.img}" onclick="imgClick(${item.id})"/></a>
+            </div>
             <div class="shop2-zone-card-text">
               <p class="shop2-zone-card-text-base">${item.base}</p>
               <h4 class="shop2-zone-card-text-name">${item.name}</h4>
@@ -34,9 +43,9 @@ function showScreen2() {
     if (item.id >= 12) {
       screen2.innerHTML += `
       <li class="shop2-zone-card">
-            <a href="#"><div class="shop2-zone-card-pict">
-              <img src="${item.img}" />
-            </div></a>
+            <div class="shop2-zone-card-pict">
+            <a href="view.html"><img src="${item.img}" onclick="imgClick(${item.id})"/></a>
+            </div>
             <div class="shop2-zone-card-text">
               <p class="shop2-zone-card-text-base">${item.base}</p>
               <h4 class="shop2-zone-card-text-name">${item.name}</h4>
