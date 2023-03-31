@@ -76,7 +76,7 @@ function addCart(id) {
     addQuantity("more", id);
   } else {
     let package = products.find((item) => item.id === id);
-    cart.push({ ...package, quantity: 1 });
+    cart.unshift({ ...package, quantity: 1 });
     console.log(cart);
   }
   refreshCart();
