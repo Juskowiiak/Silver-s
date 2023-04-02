@@ -1,4 +1,5 @@
 @use "mixim";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -542,10 +543,12 @@ main {
             margin-top: 1.3rem;
           }
           &-base {
+            font-family: "Cormorant Garamond";
             color: var(--verd-esc);
             font-size: 0.8rem;
           }
           &-name {
+            font-family: "Cormorant Garamond";
             color: var(--verd-clr);
             font-size: 1.2rem;
             margin-block: 0.1rem 0.2rem;
