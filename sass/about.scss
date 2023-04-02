@@ -395,7 +395,46 @@ header {
   }
 }
 // ---------------------------- --------------------- Main
-
+main {
+  margin-top: 10vh;
+  height: 90vh;
+  position: relative;
+  @include mixim.display;
+  .screen1 {
+    position: relative;
+    height: 70vh;
+    width: 70%;
+    z-index: -3;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 110%;
+      height: 99%;
+      top: 0;
+      left: -5%;
+      border-top: 5px solid rgb(197, 149, 115);
+      border-bottom: 5px solid rgb(197, 149, 115);
+      border-radius: 10px;
+    }
+    video {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      width: 99%;
+      height: 80%;
+      top: 10%;
+      left: 0;
+      border-left: 5px solid rgb(197, 149, 115);
+      border-right: 5px solid rgb(197, 149, 115);
+      border-radius: 5px;
+      z-index: 2;
+      @include mixim.tela_700 {
+        height: 50%;
+        top: 25%;
+      }
+    }
+  }
+}
 // ---------------------------- --------------------- SECTION
 section {
   .signup {
@@ -669,4 +708,13 @@ footer {
 }
 .bagScreen {
   right: 0 !important;
+}
+// ---------------------------- --------------------- ANIMATIONS
+@keyframes vid2 {
+  from {
+    right: -30%;
+  }
+  to {
+    right: 40%;
+  }
 }

@@ -454,6 +454,51 @@ header .carrinho-msg {
   font-size: 1.1rem;
 }
 
+main {
+  margin-top: 10vh;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .screen1 {
+  position: relative;
+  height: 70vh;
+  width: 70%;
+  z-index: -3;
+}
+main .screen1::before {
+  position: absolute;
+  content: "";
+  width: 110%;
+  height: 99%;
+  top: 0;
+  left: -5%;
+  border-top: 5px solid rgb(197, 149, 115);
+  border-bottom: 5px solid rgb(197, 149, 115);
+  border-radius: 10px;
+}
+main .screen1 video {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 99%;
+  height: 80%;
+  top: 10%;
+  left: 0;
+  border-left: 5px solid rgb(197, 149, 115);
+  border-right: 5px solid rgb(197, 149, 115);
+  border-radius: 5px;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  main .screen1 video {
+    height: 50%;
+    top: 25%;
+  }
+}
+
 section .signup {
   height: 20vh;
   display: flex;
@@ -743,6 +788,15 @@ footer .under {
 
 .bagScreen {
   right: 0 !important;
+}
+
+@keyframes vid2 {
+  from {
+    right: -30%;
+  }
+  to {
+    right: 40%;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */
