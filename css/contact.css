@@ -454,6 +454,104 @@ header .carrinho-msg {
   font-size: 1.1rem;
 }
 
+.main {
+  margin-top: 10vh;
+  height: 90vh;
+  display: flex;
+}
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+}
+.main-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .main-text {
+    width: 100%;
+    flex-direction: row;
+    height: 35%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.main-text ul {
+  color: var(--grey);
+}
+@media (max-width: 900px) {
+  .main-text ul {
+    width: 60%;
+  }
+}
+.main-text ul h3 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+@media (max-width: 900px) {
+  .main-text ul h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
+.main-text ul li {
+  display: flex;
+  align-items: center;
+}
+.main-text ul li i {
+  color: var(--yellow);
+  text-shadow: 1px 0 1px #000;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+@media (max-width: 900px) {
+  .main-text ul li i {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-text ul li h4 {
+    font-size: 0.8rem;
+  }
+}
+.main-text ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.main-text .pict {
+  width: 70%;
+  margin-top: 2rem;
+  background-color: var(--black);
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px var(--grey);
+}
+@media (max-width: 900px) {
+  .main-text .pict {
+    width: 30%;
+    margin-top: 0;
+  }
+}
+.main-map {
+  width: 60%;
+  padding: 5rem;
+}
+@media (max-width: 1185px) {
+  .main-map {
+    padding: 5rem 3.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-map {
+    width: 100%;
+    height: 65%;
+    padding: 2rem;
+  }
+}
+
 section .signup {
   height: 20vh;
   display: flex;

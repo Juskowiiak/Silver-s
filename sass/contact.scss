@@ -395,7 +395,85 @@ header {
   }
 }
 // ---------------------------- --------------------- Main
-
+.main {
+  margin-top: 10vh;
+  height: 90vh;
+  display: flex;
+  @include mixim.tela_900 {
+    flex-direction: column;
+  }
+  &-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    @include mixim.display;
+    @include mixim.tela_900 {
+      width: 100%;
+      flex-direction: row;
+      height: 35%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    ul {
+      color: var(--grey);
+      @include mixim.tela_900 {
+        width: 60%;
+      }
+      h3 {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        @include mixim.tela_900 {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+      li {
+        display: flex;
+        align-items: center;
+        i {
+          color: var(--yellow);
+          text-shadow: 1px 0 1px #000;
+          font-size: 2rem;
+          margin-right: 1rem;
+          @include mixim.tela_900 {
+            font-size: 1.5rem;
+          }
+        }
+        h4 {
+          @include mixim.tela_900 {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+    .pict {
+      width: 70%;
+      margin-top: 2rem;
+      background-color: var(--black);
+      border-radius: 5px;
+      box-shadow: 2px 2px 1px var(--grey);
+      @include mixim.tela_900 {
+        width: 30%;
+        margin-top: 0;
+      }
+    }
+  }
+  &-map {
+    width: 60%;
+    padding: 5rem;
+    @include mixim.tela_1185 {
+      padding: 5rem 3.5rem;
+    }
+    @include mixim.tela_900 {
+      width: 100%;
+      height: 65%;
+      padding: 2rem;
+    }
+  }
+}
 // ---------------------------- --------------------- SECTION
 section {
   .signup {
